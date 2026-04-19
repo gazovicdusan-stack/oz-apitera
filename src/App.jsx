@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Routes, Route, Link } from "react-router";
+import { Routes, Route, Link, useNavigate, useLocation } from "react-router";
 
 function HomePage() {
   return (
@@ -15,10 +15,12 @@ function HomePage() {
 function OnasPage() {
   return (
     <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "80px 24px" }}>
-      <h1 style={{ fontSize: "48px", marginBottom: "24px", color: "#1f1f1f" }}>O nás</h1>
+      <h1 style={{ fontSize: "48px", marginBottom: "24px", color: "#1f1f1f" }}>
+        O nás
+      </h1>
       <p style={paragraphStyle}>
-        OZ Apitera je občianske združenie zamerané na podporu verejnoprospešných aktivít,
-        rozvoj komunity a vytváranie projektov, ktoré majú pozitívny dopad.
+        OZ Apitera je občianske združenie zamerané na podporu verejnoprospešných
+        aktivít, rozvoj komunity a vytváranie projektov, ktoré majú pozitívny dopad.
       </p>
       <p style={paragraphStyle}>
         Našou snahou je prepájať ľudí, nápady a iniciatívy, ktoré pomáhajú
@@ -30,6 +32,22 @@ function OnasPage() {
 }
 
 export default function OZApiteraWebsite() {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const goHome = (e) => {
+    e.preventDefault();
+
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }, 50);
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   return (
     <div
       style={{
@@ -96,7 +114,7 @@ export default function OZApiteraWebsite() {
               boxShadow: "0 6px 20px rgba(0,0,0,0.05)",
             }}
           >
-            <Link to="/" style={navItemStyle}>Domov</Link>
+            <a href="/" onClick={goHome} style={navItemStyle}>Domov</a>
             <Link to="/o-nas" style={navItemStyle}>O nás</Link>
             <a href="/#aktivity" style={navItemStyle}>Aktivity</a>
             <a href="/#podpora" style={navItemStyle}>Podporte nás</a>
@@ -178,6 +196,8 @@ function HeroSection() {
         >
           Občianske združenie Apitera vzniklo z presvedčenia, že včely a včelárstvo
           majú nezastupiteľný význam pre človeka, prírodu aj rovnováhu v krajine.
+          Zameriavame sa na podporu a rozvoj včelárstva, vzdelávanie a
+          environmentálnu osvetu.
         </p>
 
         <div style={{ display: "flex", gap: "14px", flexWrap: "wrap" }}>
@@ -263,7 +283,10 @@ function HeroSection() {
 
 function AktivitySection() {
   return (
-    <section id="aktivity" style={{ ...sectionStyle, background: "#fffaf0" }}>
+    <section
+      id="aktivity"
+      style={{ ...sectionStyle, background: "#fffaf0", scrollMarginTop: "170px" }}
+    >
       <div style={containerStyle}>
         <h2 style={sectionTitle}>Naše aktivity</h2>
         <div
@@ -276,15 +299,23 @@ function AktivitySection() {
         >
           <div style={activityCard}>
             <h3 style={cardTitle}>Komunitné podujatia</h3>
-            <p style={cardText}>Organizovanie stretnutí, workshopov a prednášok.</p>
+            <p style={cardText}>
+              Organizovanie stretnutí, workshopov, prednášok a podujatí pre verejnosť.
+            </p>
           </div>
+
           <div style={activityCard}>
             <h3 style={cardTitle}>Vzdelávanie a osveta</h3>
-            <p style={cardText}>Podpora edukácie a rozvoj užitočných zručností.</p>
+            <p style={cardText}>
+              Šírenie informácií, podpora edukácie a rozvoj užitočných zručností v komunite.
+            </p>
           </div>
+
           <div style={activityCard}>
             <h3 style={cardTitle}>Pomoc a spolupráca</h3>
-            <p style={cardText}>Zapájanie dobrovoľníkov a partnerov do projektov.</p>
+            <p style={cardText}>
+              Zapájanie dobrovoľníkov, partnerov a podporovateľov do zmysluplných projektov.
+            </p>
           </div>
         </div>
       </div>
@@ -300,6 +331,7 @@ function PodporaSection() {
         padding: "80px 24px",
         background: "#2f2416",
         color: "white",
+        scrollMarginTop: "170px",
       }}
     >
       <div
@@ -315,7 +347,8 @@ function PodporaSection() {
         <div>
           <h2 style={{ fontSize: "40px", marginBottom: "20px" }}>Podporte nás</h2>
           <p style={{ fontSize: "18px", lineHeight: "1.8", color: "#e7d8c5" }}>
-            Pomôžte nám realizovať ďalšie projekty a aktivity.
+            Pomôžte nám realizovať ďalšie projekty a aktivity. Podporiť nás môžete
+            finančne, dobrovoľníckou pomocou alebo partnerskou spoluprácou.
           </p>
         </div>
 
@@ -351,7 +384,7 @@ function PodporaSection() {
 
 function KontaktSection() {
   return (
-    <section id="kontakt" style={sectionStyle}>
+    <section id="kontakt" style={{ ...sectionStyle, scrollMarginTop: "170px" }}>
       <div
         style={{
           maxWidth: "1100px",
@@ -371,6 +404,25 @@ function KontaktSection() {
             <div><strong>E-mail:</strong> info@ozapitera.sk</div>
             <div><strong>Telefón:</strong> +421 xxx xxx xxx</div>
             <div><strong>Adresa:</strong> Ulica 123, Mesto</div>
+          </div>
+        </div>
+
+        <div
+          style={{
+            background: "#fff8ea",
+            border: "1px solid #f0dfb4",
+            borderRadius: "24px",
+            padding: "28px",
+            boxShadow: "0 8px 24px rgba(0,0,0,0.06)",
+          }}
+        >
+          <h3 style={{ fontSize: "28px", marginTop: 0 }}>Napíšte nám</h3>
+
+          <div style={{ display: "grid", gap: "14px", marginTop: "18px" }}>
+            <input type="text" placeholder="Meno a priezvisko" style={inputStyle} />
+            <input type="email" placeholder="E-mail" style={inputStyle} />
+            <textarea placeholder="Vaša správa" rows="5" style={inputStyle}></textarea>
+            <button style={primaryButtonButton}>Odoslať správu</button>
           </div>
         </div>
       </div>
@@ -420,6 +472,16 @@ const cardText = {
   color: "#555",
 };
 
+const inputStyle = {
+  width: "100%",
+  padding: "14px 16px",
+  borderRadius: "14px",
+  border: "1px solid #ddd",
+  fontSize: "16px",
+  fontFamily: "Arial, sans-serif",
+  boxSizing: "border-box",
+};
+
 const primaryButton = {
   display: "inline-block",
   background: "#c27c00",
@@ -439,6 +501,17 @@ const secondaryButton = {
   textDecoration: "none",
   fontWeight: "bold",
   border: "1px solid #ddd",
+};
+
+const primaryButtonButton = {
+  background: "#c27c00",
+  color: "white",
+  border: "none",
+  padding: "14px 20px",
+  borderRadius: "14px",
+  fontSize: "16px",
+  fontWeight: "bold",
+  cursor: "pointer",
 };
 
 const navItemStyle = {

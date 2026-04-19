@@ -51,9 +51,58 @@ function GrantyPage() {
   );
 }
 
+function OApiterePage() {
+  return (
+    <div style={pageWrapStyle}>
+      <h1 style={pageTitleStyle}>O Apitere</h1>
+      <p style={paragraphStyle}>
+        OZ Apitera je občianske združenie zamerané na podporu včelárstva,
+        komunitných aktivít, vzdelávania a environmentálnej osvety.
+      </p>
+      <p style={paragraphStyle}>
+        Naším cieľom je prepájať ľudí, ktorí majú vzťah k prírode, tradíciám
+        a udržateľnému rozvoju, a vytvárať projekty s pozitívnym dopadom.
+      </p>
+    </div>
+  );
+}
+
+function NasTimPage() {
+  return (
+    <div style={pageWrapStyle}>
+      <h1 style={pageTitleStyle}>Náš tím</h1>
+      <p style={paragraphStyle}>
+        V tejto sekcii môžete predstaviť členov občianskeho združenia,
+        dobrovoľníkov, spolupracovníkov a ľudí, ktorí sa podieľajú na aktivitách OZ Apitera.
+      </p>
+      <p style={paragraphStyle}>
+        Doplniť sa sem môžu mená, fotografie, funkcie, krátke medailóny
+        a oblasť, ktorej sa jednotliví členovia venujú.
+      </p>
+    </div>
+  );
+}
+
+function NaseVcelnicePage() {
+  return (
+    <div style={pageWrapStyle}>
+      <h1 style={pageTitleStyle}>Naše včelnice</h1>
+      <p style={paragraphStyle}>
+        Táto stránka môže slúžiť na predstavenie vašich včelníc, ich polohy,
+        zamerania, fotografie a zaujímavosti o chove včiel.
+      </p>
+      <p style={paragraphStyle}>
+        Môžete sem doplniť aj informácie o počte úľov, miestach pôsobenia,
+        starostlivosti o včely a aktivitách spojených s včelnicami.
+      </p>
+    </div>
+  );
+}
+
 export default function OZApiteraWebsite() {
   const navigate = useNavigate();
   const location = useLocation();
+  const [showAboutMenu, setShowAboutMenu] = useState(false);
 
   const goHome = (e) => {
     e.preventDefault();
@@ -139,7 +188,23 @@ export default function OZApiteraWebsite() {
   }}
 >
             <a href="/" onClick={goHome} style={navItemStyle}>Domov</a>
-            <Link to="/o-nas" style={navItemStyle}>O nás</Link>
+            <div
+  style={{ position: "relative" }}
+  onMouseEnter={() => setShowAboutMenu(true)}
+  onMouseLeave={() => setShowAboutMenu(false)}
+>
+  <button type="button" style={navDropdownTriggerStyle}>
+    O nás
+  </button>
+
+  {showAboutMenu && (
+    <div style={dropdownMenuStyle}>
+      <Link to="/o-apitere" style={dropdownItemStyle}>O Apitere</Link>
+      <Link to="/nas-tim" style={dropdownItemStyle}>Náš tím</Link>
+      <Link to="/nase-vcelnice" style={dropdownItemStyle}>Naše včelnice</Link>
+    </div>
+  )}
+</div>
             <a href="/#aktivity" style={navItemStyle}>Aktivity</a>
             <Link to="/granty" style={navItemStyle}>Granty</Link>
             <a href="/#podpora" style={navItemStyle}>Podporte nás</a>
@@ -149,10 +214,13 @@ export default function OZApiteraWebsite() {
       </header>
 
      <Routes>
-        <Route path="/" element={<HomePage />} />
-          <Route path="/o-nas" element={<OnasPage />} />
-          <Route path="/granty" element={<GrantyPage />} />
-          </Routes>
+  <Route path="/" element={<HomePage />} />
+  <Route path="/o-nas" element={<OnasPage />} />
+  <Route path="/o-apitere" element={<OApiterePage />} />
+  <Route path="/nas-tim" element={<NasTimPage />} />
+  <Route path="/nase-vcelnice" element={<NaseVcelnicePage />} />
+  <Route path="/granty" element={<GrantyPage />} />
+</Routes>
 
       <footer
         style={{
@@ -735,4 +803,54 @@ const navButtonStyle = {
   borderRadius: "12px",
   boxShadow: "0 6px 16px rgba(194,124,0,0.25)",
   whiteSpace: "nowrap",
+};
+const navDropdownTriggerStyle = {
+  background: "transparent",
+  border: "none",
+  color: "#444",
+  fontWeight: "bold",
+  padding: "10px 14px",
+  borderRadius: "12px",
+  cursor: "pointer",
+  fontSize: "16px",
+  whiteSpace: "nowrap",
+  fontFamily: "Arial, sans-serif",
+};
+
+const dropdownMenuStyle = {
+  position: "absolute",
+  top: "100%",
+  left: "0",
+  marginTop: "10px",
+  minWidth: "190px",
+  background: "#ffffff",
+  border: "1px solid #eee",
+  borderRadius: "16px",
+  boxShadow: "0 12px 28px rgba(0,0,0,0.08)",
+  padding: "10px",
+  display: "flex",
+  flexDirection: "column",
+  gap: "6px",
+  zIndex: 50,
+};
+
+const dropdownItemStyle = {
+  textDecoration: "none",
+  color: "#444",
+  fontWeight: "bold",
+  padding: "10px 12px",
+  borderRadius: "10px",
+  whiteSpace: "nowrap",
+};
+
+const pageWrapStyle = {
+  maxWidth: "1100px",
+  margin: "0 auto",
+  padding: "80px 24px",
+};
+
+const pageTitleStyle = {
+  fontSize: "48px",
+  marginBottom: "24px",
+  color: "#1f1f1f",
 };

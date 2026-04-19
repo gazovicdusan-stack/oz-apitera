@@ -1,6 +1,8 @@
 import { useState } from "react";
+
 export default function OZApiteraWebsite() {
   const [isFlipped, setIsFlipped] = useState(false);
+
   return (
     <div
       style={{
@@ -121,79 +123,79 @@ export default function OZApiteraWebsite() {
         </div>
 
         <div
-  style={{
-    background: "white",
-    borderRadius: "28px",
-    padding: "24px",
-    boxShadow: "0 12px 35px rgba(0,0,0,0.12)",
-    textAlign: "center",
-    perspective: "1000px",
-  }}
-  onMouseEnter={() => setIsFlipped(true)}
-  onMouseLeave={() => setIsFlipped(false)}
->
-  <div
-    style={{
-      position: "relative",
-      width: "100%",
-      height: "500px",
-      transformStyle: "preserve-3d",
-      transition: "transform 0.7s",
-      transform: isFlipped ? "rotateY(180deg)" : "rotateY(0deg)",
-    }}
-  >
-    <div
-      style={{
-        position: "absolute",
-        width: "100%",
-        height: "100%",
-        backfaceVisibility: "hidden",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
-      <img
-        src="/logo.jpg"
-        alt="Logo Apitera"
-        style={{
-          width: "100%",
-          maxWidth: "450px",
-          borderRadius: "20px",
-          objectFit: "cover",
-        }}
-      />
-    </div>
+          style={{
+            background: "white",
+            borderRadius: "28px",
+            padding: "24px",
+            boxShadow: "0 12px 35px rgba(0,0,0,0.12)",
+            textAlign: "center",
+            perspective: "1000px",
+          }}
+          onMouseEnter={() => setIsFlipped(true)}
+          onMouseLeave={() => setIsFlipped(false)}
+        >
+          <div
+            style={{
+              position: "relative",
+              width: "100%",
+              height: "500px",
+              transformStyle: "preserve-3d",
+              transition: "transform 0.7s",
+              transform: isFlipped ? "rotateY(180deg)" : "rotateY(0deg)",
+            }}
+          >
+            <div
+              style={{
+                position: "absolute",
+                width: "100%",
+                height: "100%",
+                backfaceVisibility: "hidden",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <img
+                src="/logo.jpg"
+                alt="Logo Apitera"
+                style={{
+                  width: "100%",
+                  maxWidth: "450px",
+                  borderRadius: "20px",
+                  objectFit: "cover",
+                }}
+              />
+            </div>
 
-    <div
-      style={{
-        position: "absolute",
-        width: "100%",
-        height: "100%",
-        backfaceVisibility: "hidden",
-        transform: "rotateY(180deg)",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        padding: "30px",
-        boxSizing: "border-box",
-      }}
-    >
-      <div>
-        <h3 style={{ fontSize: "30px", marginBottom: "18px", color: "#9b6300" }}>
-          O našom združení
-        </h3>
-        <p style={{ fontSize: "18px", lineHeight: "1.8", color: "#555" }}>
-          OZ Apitera podporuje komunitné aktivity, spoluprácu, pomoc a rozvoj.
-          Naším cieľom je prepájať ľudí a vytvárať projekty s pozitívnym dopadom.
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
+            <div
+              style={{
+                position: "absolute",
+                width: "100%",
+                height: "100%",
+                backfaceVisibility: "hidden",
+                transform: "rotateY(180deg)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                padding: "30px",
+                boxSizing: "border-box",
+              }}
+            >
+              <div>
+                <h3 style={{ fontSize: "30px", marginBottom: "18px", color: "#9b6300" }}>
+                  O našom združení
+                </h3>
+                <p style={{ fontSize: "18px", lineHeight: "1.8", color: "#555" }}>
+                  OZ Apitera podporuje komunitné aktivity, spoluprácu, pomoc a rozvoj.
+                  Naším cieľom je prepájať ľudí a vytvárať projekty s pozitívnym dopadom.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section id="o-nas" style={sectionStyle}>
+      <section id="o-nas" style={{ ...sectionStyle, scrollMarginTop: "170px" }}>
         <div style={containerStyle}>
           <h2 style={sectionTitle}>O nás</h2>
           <p style={paragraphStyle}>
@@ -209,7 +211,10 @@ export default function OZApiteraWebsite() {
         </div>
       </section>
 
-      <section id="aktivity" style={{ ...sectionStyle, background: "#fffaf0" }}>
+      <section
+        id="aktivity"
+        style={{ ...sectionStyle, background: "#fffaf0", scrollMarginTop: "170px" }}
+      >
         <div style={containerStyle}>
           <h2 style={sectionTitle}>Naše aktivity</h2>
           <div
@@ -253,6 +258,7 @@ export default function OZApiteraWebsite() {
           padding: "80px 24px",
           background: "#2f2416",
           color: "white",
+          scrollMarginTop: "170px",
         }}
       >
         <div
@@ -302,7 +308,7 @@ export default function OZApiteraWebsite() {
         </div>
       </section>
 
-      <section id="kontakt" style={sectionStyle}>
+      <section id="kontakt" style={{ ...sectionStyle, scrollMarginTop: "170px" }}>
         <div
           style={{
             maxWidth: "1100px",

@@ -6,7 +6,6 @@ function HomePage() {
     <div>
       <HeroSection />
       <AktualitySection />
-      <AktivitySection />
       <PodporaSection />
       <KontaktSection />
     </div>
@@ -15,10 +14,8 @@ function HomePage() {
 
 function OnasPage() {
   return (
-    <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "80px 24px" }}>
-      <h1 style={{ fontSize: "48px", marginBottom: "24px", color: "#1f1f1f" }}>
-        O nás
-      </h1>
+    <div style={pageWrapStyle}>
+      <h1 style={pageTitleStyle}>O nás</h1>
       <p style={paragraphStyle}>
         OZ Apitera je občianske združenie zamerané na podporu verejnoprospešných
         aktivít, rozvoj komunity a vytváranie projektov, ktoré majú pozitívny dopad.
@@ -34,10 +31,8 @@ function OnasPage() {
 
 function GrantyPage() {
   return (
-    <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "80px 24px" }}>
-      <h1 style={{ fontSize: "48px", marginBottom: "24px", color: "#1f1f1f" }}>
-        Granty
-      </h1>
+    <div style={pageWrapStyle}>
+      <h1 style={pageTitleStyle}>Granty</h1>
       <p style={paragraphStyle}>
         V tejto sekcii budú zverejnené informácie o grantových výzvach,
         podporených projektoch, možnostiach financovania a aktivitách,
@@ -99,10 +94,45 @@ function NaseVcelnicePage() {
   );
 }
 
+function VzdelavaniePage() {
+  return (
+    <div style={pageWrapStyle}>
+      <h1 style={pageTitleStyle}>Vzdelávanie</h1>
+      <p style={paragraphStyle}>
+        V tejto sekcii môžete prezentovať vzdelávacie aktivity OZ Apitera,
+        workshopy, prednášky, osvetové podujatia a programy pre verejnosť,
+        školy alebo záujemcov o včelárstvo.
+      </p>
+      <p style={paragraphStyle}>
+        Doplniť sem môžete termíny podujatí, fotografie, výstupy,
+        pripravované aktivity aj spolupracujúce organizácie.
+      </p>
+    </div>
+  );
+}
+
+function VedaVyskumPage() {
+  return (
+    <div style={pageWrapStyle}>
+      <h1 style={pageTitleStyle}>Veda a výskum</h1>
+      <p style={paragraphStyle}>
+        Táto stránka môže slúžiť na predstavenie odborných aktivít,
+        výskumných projektov, spolupráce s partnermi a tém, ktorým sa
+        OZ Apitera venuje v oblasti vedy a výskumu.
+      </p>
+      <p style={paragraphStyle}>
+        Môžete sem doplniť publikácie, výsledky, partnerov projektu,
+        zameranie výskumu aj pripravované odborné iniciatívy.
+      </p>
+    </div>
+  );
+}
+
 export default function OZApiteraWebsite() {
   const navigate = useNavigate();
   const location = useLocation();
   const [showAboutMenu, setShowAboutMenu] = useState(false);
+  const [showActivitiesMenu, setShowActivitiesMenu] = useState(false);
 
   const goHome = (e) => {
     e.preventDefault();
@@ -178,7 +208,7 @@ export default function OZApiteraWebsite() {
               flexWrap: "nowrap",
               marginLeft: "auto",
               width: "fit-content",
-              minWidth: "560px",
+              minWidth: "620px",
               justifyContent: "space-between",
               background: "rgba(255,255,255,0.9)",
               padding: "10px 12px",
@@ -207,7 +237,23 @@ export default function OZApiteraWebsite() {
               )}
             </div>
 
-            <a href="/#aktivity" style={navItemStyle}>Aktivity</a>
+            <div
+              style={{ position: "relative", display: "flex", alignItems: "center" }}
+              onMouseEnter={() => setShowActivitiesMenu(true)}
+              onMouseLeave={() => setShowActivitiesMenu(false)}
+            >
+              <button type="button" style={navDropdownTriggerStyle}>
+                Aktivity
+              </button>
+
+              {showActivitiesMenu && (
+                <div style={dropdownMenuStyle}>
+                  <Link to="/vzdelavanie" style={dropdownItemStyle}>Vzdelávanie</Link>
+                  <Link to="/veda-a-vyskum" style={dropdownItemStyle}>Veda a výskum</Link>
+                </div>
+              )}
+            </div>
+
             <Link to="/granty" style={navItemStyle}>Granty</Link>
             <a href="/#podpora" style={navItemStyle}>Podporte nás</a>
             <a href="/#kontakt" style={navButtonStyle}>Kontakt</a>
@@ -221,6 +267,8 @@ export default function OZApiteraWebsite() {
         <Route path="/o-apitere" element={<OApiterePage />} />
         <Route path="/nas-tim" element={<NasTimPage />} />
         <Route path="/nase-vcelnice" element={<NaseVcelnicePage />} />
+        <Route path="/vzdelavanie" element={<VzdelavaniePage />} />
+        <Route path="/veda-a-vyskum" element={<VedaVyskumPage />} />
         <Route path="/granty" element={<GrantyPage />} />
       </Routes>
 
@@ -380,31 +428,15 @@ function HeroSection() {
 function AktualitySection() {
   return (
     <section
+      id="aktivity"
       style={{
-        padding: "30px 24px 10px",
+        ...sectionStyle,
+        background: "#fffaf0",
+        scrollMarginTop: "170px",
       }}
     >
-      <div
-        style={{
-          maxWidth: "1100px",
-          margin: "0 auto",
-          background: "#fff",
-          borderRadius: "28px",
-          padding: "36px",
-          boxShadow: "0 10px 30px rgba(0,0,0,0.06)",
-          border: "1px solid #f1ead8",
-        }}
-      >
-        <h2
-          style={{
-            fontSize: "38px",
-            marginTop: 0,
-            marginBottom: "14px",
-            color: "#1f1f1f",
-          }}
-        >
-          Aktuality
-        </h2>
+      <div style={containerStyle}>
+        <h2 style={sectionTitle}>Aktuality</h2>
 
         <p
           style={{
@@ -428,10 +460,11 @@ function AktualitySection() {
         >
           <div
             style={{
-              background: "#fffaf0",
-              borderRadius: "20px",
+              background: "#fff",
+              borderRadius: "22px",
               padding: "24px",
               border: "1px solid #f1ead8",
+              boxShadow: "0 8px 24px rgba(0,0,0,0.06)",
             }}
           >
             <div
@@ -469,10 +502,11 @@ function AktualitySection() {
 
           <div
             style={{
-              background: "#fffaf0",
-              borderRadius: "20px",
+              background: "#fff",
+              borderRadius: "22px",
               padding: "24px",
               border: "1px solid #f1ead8",
+              boxShadow: "0 8px 24px rgba(0,0,0,0.06)",
             }}
           >
             <div
@@ -510,10 +544,11 @@ function AktualitySection() {
 
           <div
             style={{
-              background: "#fffaf0",
-              borderRadius: "20px",
+              background: "#fff",
+              borderRadius: "22px",
               padding: "24px",
               border: "1px solid #f1ead8",
+              boxShadow: "0 8px 24px rgba(0,0,0,0.06)",
             }}
           >
             <div
@@ -546,48 +581,6 @@ function AktualitySection() {
             >
               Našim cieľom je prinášať zmysluplné iniciatívy v oblasti osvety,
               komunity a podpory včelárstva.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function AktivitySection() {
-  return (
-    <section
-      id="aktivity"
-      style={{ ...sectionStyle, background: "#fffaf0", scrollMarginTop: "170px" }}
-    >
-      <div style={containerStyle}>
-        <h2 style={sectionTitle}>Naše aktivity</h2>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-            gap: "20px",
-            marginTop: "30px",
-          }}
-        >
-          <div style={activityCard}>
-            <h3 style={cardTitle}>Komunitné podujatia</h3>
-            <p style={cardText}>
-              Organizovanie stretnutí, workshopov, prednášok a podujatí pre verejnosť.
-            </p>
-          </div>
-
-          <div style={activityCard}>
-            <h3 style={cardTitle}>Vzdelávanie a osveta</h3>
-            <p style={cardText}>
-              Šírenie informácií, podpora edukácie a rozvoj užitočných zručností v komunite.
-            </p>
-          </div>
-
-          <div style={activityCard}>
-            <h3 style={cardTitle}>Pomoc a spolupráca</h3>
-            <p style={cardText}>
-              Zapájanie dobrovoľníkov, partnerov a podporovateľov do zmysluplných projektov.
             </p>
           </div>
         </div>
@@ -723,26 +716,6 @@ const paragraphStyle = {
   lineHeight: "1.8",
   color: "#555",
   maxWidth: "850px",
-};
-
-const activityCard = {
-  background: "white",
-  borderRadius: "22px",
-  padding: "26px",
-  boxShadow: "0 8px 24px rgba(0,0,0,0.06)",
-  border: "1px solid #f1ead8",
-};
-
-const cardTitle = {
-  fontSize: "24px",
-  marginBottom: "12px",
-  color: "#9b6300",
-};
-
-const cardText = {
-  fontSize: "17px",
-  lineHeight: "1.7",
-  color: "#555",
 };
 
 const inputStyle = {

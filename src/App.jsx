@@ -32,6 +32,25 @@ function OnasPage() {
   );
 }
 
+function GrantyPage() {
+  return (
+    <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "80px 24px" }}>
+      <h1 style={{ fontSize: "48px", marginBottom: "24px", color: "#1f1f1f" }}>
+        Granty
+      </h1>
+      <p style={paragraphStyle}>
+        V tejto sekcii budú zverejnené informácie o grantových výzvach,
+        podporených projektoch, možnostiach financovania a aktivitách,
+        ktoré OZ Apitera realizuje s pomocou grantov a partnerov.
+      </p>
+      <p style={paragraphStyle}>
+        Nájdete tu aj prehľad pripravovaných grantových iniciatív,
+        zapojených partnerov a priebežné informácie o realizovaných projektoch.
+      </p>
+    </div>
+  );
+}
+
 export default function OZApiteraWebsite() {
   const navigate = useNavigate();
   const location = useLocation();
@@ -118,16 +137,18 @@ export default function OZApiteraWebsite() {
             <a href="/" onClick={goHome} style={navItemStyle}>Domov</a>
             <Link to="/o-nas" style={navItemStyle}>O nás</Link>
             <a href="/#aktivity" style={navItemStyle}>Aktivity</a>
+            <Link to="/granty" style={navItemStyle}>Granty</Link>
             <a href="/#podpora" style={navItemStyle}>Podporte nás</a>
             <a href="/#kontakt" style={navButtonStyle}>Kontakt</a>
           </nav>
         </div>
       </header>
 
-      <Routes>
+     <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/o-nas" element={<OnasPage />} />
-      </Routes>
+          <Route path="/o-nas" element={<OnasPage />} />
+          <Route path="/granty" element={<GrantyPage />} />
+          </Routes>
 
       <footer
         style={{

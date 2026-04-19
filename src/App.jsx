@@ -56,12 +56,24 @@ export default function OZApiteraWebsite() {
             </div>
           </div>
 
-          <nav style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}>
-            <a href="#o-nas" style={linkStyle}>O nás</a>
-            <a href="#aktivity" style={linkStyle}>Aktivity</a>
-            <a href="#podpora" style={linkStyle}>Podporte nás</a>
-            <a href="#kontakt" style={linkStyle}>Kontakt</a>
-          </nav>
+          <nav
+  style={{
+    display: "flex",
+    alignItems: "center",
+    gap: "10px",
+    flexWrap: "wrap",
+    background: "rgba(255,255,255,0.9)",
+    padding: "10px 12px",
+    borderRadius: "18px",
+    border: "1px solid #eee",
+    boxShadow: "0 6px 20px rgba(0,0,0,0.05)",
+  }}
+>
+  <a href="#o-nas" style={navItemStyle}>O nás</a>
+  <a href="#aktivity" style={navItemStyle}>Aktivity</a>
+  <a href="#podpora" style={navItemStyle}>Podporte nás</a>
+  <a href="#kontakt" style={navButtonStyle}>Kontakt</a>
+</nav>
         </div>
       </header>
 
@@ -453,8 +465,21 @@ const primaryButtonButton = {
   cursor: "pointer",
 };
 
-const linkStyle = {
+const navItemStyle = {
   textDecoration: "none",
   color: "#444",
   fontWeight: "bold",
+  padding: "10px 14px",
+  borderRadius: "12px",
+  transition: "0.2s",
+};
+
+const navButtonStyle = {
+  textDecoration: "none",
+  background: "#c27c00",
+  color: "white",
+  fontWeight: "bold",
+  padding: "10px 16px",
+  borderRadius: "12px",
+  boxShadow: "0 6px 16px rgba(194,124,0,0.25)",
 };

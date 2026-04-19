@@ -188,8 +188,8 @@ export default function OZApiteraWebsite() {
   }}
 >
             <a href="/" onClick={goHome} style={navItemStyle}>Domov</a>
-            <div
-  style={{ position: "relative" }}
+           <div
+  style={{ position: "relative", display: "flex", alignItems: "center" }}
   onMouseEnter={() => setShowAboutMenu(true)}
   onMouseLeave={() => setShowAboutMenu(false)}
 >
@@ -205,6 +205,7 @@ export default function OZApiteraWebsite() {
     </div>
   )}
 </div>
+</div>
             <a href="/#aktivity" style={navItemStyle}>Aktivity</a>
             <Link to="/granty" style={navItemStyle}>Granty</Link>
             <a href="/#podpora" style={navItemStyle}>Podporte nás</a>
@@ -214,16 +215,17 @@ export default function OZApiteraWebsite() {
       </header>
 
      <Routes>
-  <Route path="/" element={<HomePage />} />
-  <Route path="/o-nas" element={<OnasPage />} />
-  <Route path="/o-apitere" element={<OApiterePage />} />
-  <Route path="/nas-tim" element={<NasTimPage />} />
-  <Route path="/nase-vcelnice" element={<NaseVcelnicePage />} />
-  <Route path="/granty" element={<GrantyPage />} />
-</Routes>
-
+        <Route path="/" element={<HomePage />} />
+          <Route path="/o-nas" element={<OnasPage />} />
+            <Route path="/o-apitere" element={<OApiterePage />} />
+              <Route path="/nas-tim" element={<NasTimPage />} />
+                <Route path="/nase-vcelnice" element={<NaseVcelnicePage />} />
+                  <Route path="/granty" element={<GrantyPage />} />
+                  
+      </Routes>
       <footer
-        style={{
+
+      style={{
           borderTop: "1px solid #eee",
           padding: "24px",
           textAlign: "center",
@@ -821,7 +823,6 @@ const dropdownMenuStyle = {
   position: "absolute",
   top: "100%",
   left: "0",
-  marginTop: "10px",
   minWidth: "190px",
   background: "#ffffff",
   border: "1px solid #eee",
@@ -840,7 +841,8 @@ const dropdownItemStyle = {
   fontWeight: "bold",
   padding: "10px 12px",
   borderRadius: "10px",
-  whiteSpace: "nowrap",
+  whiteSpace: "nowrap",4
+  display: "block",
 };
 
 const pageWrapStyle = {

@@ -322,11 +322,11 @@ export default function OZApiteraWebsite() {
               width: "fit-content",
               minWidth: "620px",
               justifyContent: "space-between",
-              background: "rgba(255,255,255,0.9)",
+              background: "rgba(255,255,255,0.95)",
               padding: "10px 12px",
               borderRadius: "18px",
-              border: "1px solid #eee",
-              boxShadow: "0 6px 20px rgba(0,0,0,0.05)",
+              border: "1px solid #ead7ac",
+              boxShadow: "0 10px 28px rgba(138, 99, 20, 0.14)",
             }}
           >
             <a href="/" onClick={goHome} style={navItemStyle}>Domov</a>
@@ -341,10 +341,10 @@ export default function OZApiteraWebsite() {
               </button>
 
               {showAboutMenu && (
-                <div style={dropdownMenuStyle}>
-                  <Link to="/o-apitere" style={dropdownItemStyle}>O Apitere</Link>
-                  <Link to="/nas-tim" style={dropdownItemStyle}>Náš tím</Link>
-                  <Link to="/nase-vcelnice" style={dropdownItemStyle}>Naše včelnice</Link>
+                <div style={goldDropdownMenuStyle}>
+                  <Link to="/o-apitere" style={goldDropdownItemStyle}>O Apitere</Link>
+                  <Link to="/nas-tim" style={goldDropdownItemStyle}>Náš tím</Link>
+                  <Link to="/nase-vcelnice" style={goldDropdownItemStyle}>Naše včelnice</Link>
                 </div>
               )}
             </div>
@@ -359,9 +359,9 @@ export default function OZApiteraWebsite() {
               </button>
 
               {showActivitiesMenu && (
-                <div style={dropdownMenuStyle}>
-                  <Link to="/vzdelavanie" style={dropdownItemStyle}>Vzdelávanie</Link>
-                  <Link to="/veda-a-vyskum" style={dropdownItemStyle}>Veda a výskum</Link>
+                <div style={goldDropdownMenuStyle}>
+                  <Link to="/vzdelavanie" style={goldDropdownItemStyle}>Vzdelávanie</Link>
+                  <Link to="/veda-a-vyskum" style={goldDropdownItemStyle}>Veda a výskum</Link>
                 </div>
               )}
             </div>
@@ -883,7 +883,7 @@ const primaryButtonButton = {
 
 const navItemStyle = {
   textDecoration: "none",
-  color: "#444",
+  color: "#5f4a1d",
   fontWeight: "bold",
   padding: "10px 14px",
   borderRadius: "12px",
@@ -904,7 +904,7 @@ const navButtonStyle = {
 const navDropdownTriggerStyle = {
   background: "transparent",
   border: "none",
-  color: "#444",
+  color: "#5f4a1d",
   fontWeight: "bold",
   padding: "10px 14px",
   borderRadius: "12px",
@@ -914,30 +914,32 @@ const navDropdownTriggerStyle = {
   fontFamily: "Arial, sans-serif",
 };
 
-const dropdownMenuStyle = {
+const goldDropdownMenuStyle = {
   position: "absolute",
   top: "calc(100% - 2px)",
   left: "0",
-  minWidth: "190px",
-  background: "#ffffff",
-  border: "1px solid #eee",
-  borderRadius: "16px",
-  boxShadow: "0 12px 28px rgba(0,0,0,0.08)",
-  padding: "10px",
+  minWidth: "230px",
+  background: "linear-gradient(to bottom, #fffdf6, #fff7e8)",
+  border: "1px solid #ead7ac",
+  borderRadius: "18px",
+  boxShadow: "0 16px 34px rgba(138, 99, 20, 0.18)",
+  padding: "12px",
   display: "flex",
   flexDirection: "column",
-  gap: "6px",
+  gap: "8px",
   zIndex: 50,
 };
 
-const dropdownItemStyle = {
+const goldDropdownItemStyle = {
   textDecoration: "none",
-  color: "#444",
+  color: "#5a4214",
   fontWeight: "bold",
-  padding: "10px 12px",
-  borderRadius: "10px",
+  padding: "12px 14px",
+  borderRadius: "12px",
   whiteSpace: "nowrap",
   display: "block",
+  background: "rgba(255,255,255,0.6)",
+  border: "1px solid rgba(234, 215, 172, 0.65)",
 };
 
 const pageWrapStyle = {

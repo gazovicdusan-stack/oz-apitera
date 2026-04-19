@@ -1,0 +1,17 @@
+:root {
+  font-family: Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: white;
+  color: #111;
+}
+
+ul {
+  padding-left: 20px;
+}

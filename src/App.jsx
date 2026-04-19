@@ -141,9 +141,28 @@ export default function OZApiteraWebsite() {
       navigate("/");
       setTimeout(() => {
         window.scrollTo({ top: 0, behavior: "smooth" });
-      }, 50);
+      }, 80);
     } else {
       window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
+  const goToSection = (sectionId) => (e) => {
+    e.preventDefault();
+
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        const el = document.getElementById(sectionId);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 150);
+    } else {
+      const el = document.getElementById(sectionId);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
     }
   };
 
@@ -255,8 +274,12 @@ export default function OZApiteraWebsite() {
             </div>
 
             <Link to="/granty" style={navItemStyle}>Granty</Link>
-            <a href="/#podpora" style={navItemStyle}>Podporte nás</a>
-            <a href="/#kontakt" style={navButtonStyle}>Kontakt</a>
+            <a href="/#podpora" onClick={goToSection("podpora")} style={navItemStyle}>
+              Podporte nás
+            </a>
+            <a href="/#kontakt" onClick={goToSection("kontakt")} style={navButtonStyle}>
+              Kontakt
+            </a>
           </nav>
         </div>
       </header>

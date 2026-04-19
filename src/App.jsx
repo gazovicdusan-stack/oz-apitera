@@ -5,6 +5,7 @@ function HomePage() {
   return (
     <div>
       <HeroSection />
+      <AktualitySection />
       <AktivitySection />
       <PodporaSection />
       <KontaktSection />
@@ -274,6 +275,183 @@ function HeroSection() {
                 Naším cieľom je prepájať ľudí a vytvárať projekty s pozitívnym dopadom.
               </p>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function AktualitySection() {
+  return (
+    <section
+      style={{
+        padding: "30px 24px 10px",
+      }}
+    >
+      <div
+        style={{
+          maxWidth: "1100px",
+          margin: "0 auto",
+          background: "#fff",
+          borderRadius: "28px",
+          padding: "36px",
+          boxShadow: "0 10px 30px rgba(0,0,0,0.06)",
+          border: "1px solid #f1ead8",
+        }}
+      >
+        <h2
+          style={{
+            fontSize: "38px",
+            marginTop: 0,
+            marginBottom: "14px",
+            color: "#1f1f1f",
+          }}
+        >
+          Aktuality
+        </h2>
+
+        <p
+          style={{
+            fontSize: "18px",
+            lineHeight: "1.8",
+            color: "#555",
+            marginBottom: "28px",
+            maxWidth: "850px",
+          }}
+        >
+          Sledujte najnovšie informácie o našich aktivitách, pripravovaných
+          podujatiach, vzdelávacích stretnutiach a komunitných projektoch.
+        </p>
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+            gap: "20px",
+          }}
+        >
+          <div
+            style={{
+              background: "#fffaf0",
+              borderRadius: "20px",
+              padding: "24px",
+              border: "1px solid #f1ead8",
+            }}
+          >
+            <div
+              style={{
+                fontSize: "14px",
+                fontWeight: "bold",
+                color: "#c27c00",
+                marginBottom: "10px",
+              }}
+            >
+              Novinka
+            </div>
+            <h3
+              style={{
+                fontSize: "24px",
+                marginTop: 0,
+                marginBottom: "12px",
+                color: "#1f1f1f",
+              }}
+            >
+              Pripravujeme nové podujatia
+            </h3>
+            <p
+              style={{
+                fontSize: "16px",
+                lineHeight: "1.7",
+                color: "#555",
+                margin: 0,
+              }}
+            >
+              Už čoskoro zverejníme termíny pripravovaných stretnutí,
+              workshopov a komunitných aktivít.
+            </p>
+          </div>
+
+          <div
+            style={{
+              background: "#fffaf0",
+              borderRadius: "20px",
+              padding: "24px",
+              border: "1px solid #f1ead8",
+            }}
+          >
+            <div
+              style={{
+                fontSize: "14px",
+                fontWeight: "bold",
+                color: "#c27c00",
+                marginBottom: "10px",
+              }}
+            >
+              Oznámenie
+            </div>
+            <h3
+              style={{
+                fontSize: "24px",
+                marginTop: 0,
+                marginBottom: "12px",
+                color: "#1f1f1f",
+              }}
+            >
+              Rozširujeme spoluprácu
+            </h3>
+            <p
+              style={{
+                fontSize: "16px",
+                lineHeight: "1.7",
+                color: "#555",
+                margin: 0,
+              }}
+            >
+              Postupne prepájame partnerov, dobrovoľníkov a podporovateľov,
+              ktorí chcú pomôcť našim aktivitám rásť.
+            </p>
+          </div>
+
+          <div
+            style={{
+              background: "#fffaf0",
+              borderRadius: "20px",
+              padding: "24px",
+              border: "1px solid #f1ead8",
+            }}
+          >
+            <div
+              style={{
+                fontSize: "14px",
+                fontWeight: "bold",
+                color: "#c27c00",
+                marginBottom: "10px",
+              }}
+            >
+              Informácia
+            </div>
+            <h3
+              style={{
+                fontSize: "24px",
+                marginTop: 0,
+                marginBottom: "12px",
+                color: "#1f1f1f",
+              }}
+            >
+              Pracujeme na nových projektoch
+            </h3>
+            <p
+              style={{
+                fontSize: "16px",
+                lineHeight: "1.7",
+                color: "#555",
+                margin: 0,
+              }}
+            >
+              Našim cieľom je prinášať zmysluplné iniciatívy v oblasti osvety,
+              komunity a podpory včelárstva.
+            </p>
           </div>
         </div>
       </div>

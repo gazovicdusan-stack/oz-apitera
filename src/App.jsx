@@ -88,17 +88,17 @@ export default function OZApiteraWebsite() {
         }}
       >
         <div
-          style={{
-            maxWidth: "1100px",
-            margin: "0 auto",
-            padding: "18px 24px",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            flexWrap: "wrap",
-            gap: "10px",
-          }}
-        >
+  style={{
+    maxWidth: "1100px",
+    margin: "0 auto",
+    padding: "18px 24px",
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    flexWrap: "nowrap",
+    gap: "20px",
+  }}
+>
           <div style={{ display: "flex", alignItems: "center", gap: "14px" }}>
             <img
               src="/logo.jpg"

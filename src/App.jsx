@@ -35,8 +35,8 @@ export default function OZApiteraWebsite() {
               src="/logo.jpg"
               alt="Logo OZ Apitera"
               style={{
-                width: "80px",
-                height: "80px",
+                width: "100px",
+                height: "100px",
                 objectFit: "cover",
                 borderRadius: "50%",
                 border: "2px solid #f0dfb4",

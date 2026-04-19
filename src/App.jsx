@@ -98,14 +98,107 @@ function VzdelavaniePage() {
   return (
     <div style={pageWrapStyle}>
       <h1 style={pageTitleStyle}>Vzdelávanie</h1>
+
       <p style={paragraphStyle}>
         V tejto sekcii môžete prezentovať vzdelávacie aktivity OZ Apitera,
         workshopy, prednášky, osvetové podujatia a programy pre verejnosť,
         školy alebo záujemcov o včelárstvo.
       </p>
+
+      <div
+        style={{
+          marginTop: "40px",
+          background: "#fffaf0",
+          border: "1px solid #f1ead8",
+          borderRadius: "24px",
+          padding: "32px",
+          boxShadow: "0 8px 24px rgba(0,0,0,0.06)",
+        }}
+      >
+        <h2
+          style={{
+            fontSize: "34px",
+            marginTop: 0,
+            marginBottom: "14px",
+            color: "#1f1f1f",
+          }}
+        >
+          Projekt včely ľuďom
+        </h2>
+
+        <p
+          style={{
+            fontSize: "18px",
+            lineHeight: "1.8",
+            color: "#555",
+            marginBottom: "24px",
+            maxWidth: "850px",
+          }}
+        >
+          V rámci projektu včely ľuďom prinášame vzdelávacie aktivity,
+          ktoré prepájajú ľudí s témou včiel, prírody, včelárstva a osvety.
+        </p>
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+            gap: "20px",
+          }}
+        >
+          <Link to="/univerzita-ludskosti-v-zavare" style={educationCardStyle}>
+            <div style={educationLabelStyle}>Vzdelávací projekt</div>
+            <h3 style={educationTitleStyle}>Univerzita ľudskosti v Zavare</h3>
+            <p style={educationTextStyle}>
+              Viac informácií o aktivitách, programe a priebehu vzdelávania v Zavare.
+            </p>
+          </Link>
+
+          <Link
+            to="/vcelarske-vzdelavanie-pre-najmensich-v-bratislave"
+            style={educationCardStyle}
+          >
+            <div style={educationLabelStyle}>Vzdelávací projekt</div>
+            <h3 style={educationTitleStyle}>
+              Včelárske vzdelávanie pre najmenších v Bratislave
+            </h3>
+            <p style={educationTextStyle}>
+              Predstavenie projektu zameraného na najmenšie deti a ich vzťah k včelám a prírode.
+            </p>
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function UniverzitaLudskostiPage() {
+  return (
+    <div style={pageWrapStyle}>
+      <h1 style={pageTitleStyle}>Univerzita ľudskosti v Zavare</h1>
       <p style={paragraphStyle}>
-        Doplniť sem môžete termíny podujatí, fotografie, výstupy,
-        pripravované aktivity aj spolupracujúce organizácie.
+        Táto stránka môže slúžiť na predstavenie projektu Univerzita ľudskosti v Zavare,
+        jeho cieľov, programu, partnerov a priebehu realizácie.
+      </p>
+      <p style={paragraphStyle}>
+        Môžete sem doplniť fotografie, harmonogram, výstupy projektu a ďalšie
+        informácie o vzdelávacích aktivitách.
+      </p>
+    </div>
+  );
+}
+
+function VzdelavanieNajmensichPage() {
+  return (
+    <div style={pageWrapStyle}>
+      <h1 style={pageTitleStyle}>Včelárske vzdelávanie pre najmenších v Bratislave</h1>
+      <p style={paragraphStyle}>
+        Táto stránka môže predstaviť vzdelávacie aktivity určené pre deti,
+        ktoré sú zamerané na spoznávanie sveta včiel, prírody a základov včelárstva.
+      </p>
+      <p style={paragraphStyle}>
+        Môžete sem doplniť priebeh projektu, cieľové skupiny, fotografie,
+        spolupracujúce organizácie a konkrétne aktivity realizované v Bratislave.
       </p>
     </div>
   );
@@ -293,6 +386,11 @@ export default function OZApiteraWebsite() {
         <Route path="/vzdelavanie" element={<VzdelavaniePage />} />
         <Route path="/veda-a-vyskum" element={<VedaVyskumPage />} />
         <Route path="/granty" element={<GrantyPage />} />
+        <Route path="/univerzita-ludskosti-v-zavare" element={<UniverzitaLudskostiPage />} />
+        <Route
+          path="/vcelarske-vzdelavanie-pre-najmensich-v-bratislave"
+          element={<VzdelavanieNajmensichPage />}
+        />
       </Routes>
 
       <footer
@@ -852,4 +950,36 @@ const pageTitleStyle = {
   fontSize: "48px",
   marginBottom: "24px",
   color: "#1f1f1f",
+};
+
+const educationCardStyle = {
+  display: "block",
+  textDecoration: "none",
+  background: "#ffffff",
+  border: "1px solid #f1ead8",
+  borderRadius: "20px",
+  padding: "24px",
+  boxShadow: "0 8px 24px rgba(0,0,0,0.05)",
+  color: "#222",
+};
+
+const educationLabelStyle = {
+  fontSize: "14px",
+  fontWeight: "bold",
+  color: "#c27c00",
+  marginBottom: "10px",
+};
+
+const educationTitleStyle = {
+  fontSize: "24px",
+  marginTop: 0,
+  marginBottom: "12px",
+  color: "#1f1f1f",
+};
+
+const educationTextStyle = {
+  fontSize: "16px",
+  lineHeight: "1.7",
+  color: "#555",
+  margin: 0,
 };

@@ -137,17 +137,17 @@ export default function OZApiteraWebsite() {
         }}
       >
         <div
-  style={{
-    maxWidth: "1280px",
-    margin: "0 auto",
-    padding: "18px 24px",
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    flexWrap: "nowrap",
-    gap: "20px",
-  }}
->
+          style={{
+            maxWidth: "1280px",
+            margin: "0 auto",
+            padding: "18px 24px",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            flexWrap: "nowrap",
+            gap: "20px",
+          }}
+        >
           <div style={{ display: "flex", alignItems: "center", gap: "14px" }}>
             <img
               src="/logo.jpg"
@@ -171,41 +171,42 @@ export default function OZApiteraWebsite() {
           </div>
 
           <nav
-  style={{
-    display: "flex",
-    alignItems: "center",
-    gap: "10px",
-    flexWrap: "nowrap",
-    marginLeft: "auto",
-    width: "fit-content",
-    minWidth: "560px",
-    justifyContent: "space-between",
-    background: "rgba(255,255,255,0.9)",
-    padding: "10px 12px",
-    borderRadius: "18px",
-    border: "1px solid #eee",
-    boxShadow: "0 6px 20px rgba(0,0,0,0.05)",
-  }}
->
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "10px",
+              flexWrap: "nowrap",
+              marginLeft: "auto",
+              width: "fit-content",
+              minWidth: "560px",
+              justifyContent: "space-between",
+              background: "rgba(255,255,255,0.9)",
+              padding: "10px 12px",
+              borderRadius: "18px",
+              border: "1px solid #eee",
+              boxShadow: "0 6px 20px rgba(0,0,0,0.05)",
+            }}
+          >
             <a href="/" onClick={goHome} style={navItemStyle}>Domov</a>
-           <div
-  style={{ position: "relative", display: "flex", alignItems: "center" }}
-  onMouseEnter={() => setShowAboutMenu(true)}
-  onMouseLeave={() => setShowAboutMenu(false)}
->
-  <button type="button" style={navDropdownTriggerStyle}>
-    O nás
-  </button>
 
-  {showAboutMenu && (
-    <div style={dropdownMenuStyle}>
-      <Link to="/o-apitere" style={dropdownItemStyle}>O Apitere</Link>
-      <Link to="/nas-tim" style={dropdownItemStyle}>Náš tím</Link>
-      <Link to="/nase-vcelnice" style={dropdownItemStyle}>Naše včelnice</Link>
-    </div>
-  )}
-</div>
-</div>
+            <div
+              style={{ position: "relative", display: "flex", alignItems: "center" }}
+              onMouseEnter={() => setShowAboutMenu(true)}
+              onMouseLeave={() => setShowAboutMenu(false)}
+            >
+              <button type="button" style={navDropdownTriggerStyle}>
+                O nás
+              </button>
+
+              {showAboutMenu && (
+                <div style={dropdownMenuStyle}>
+                  <Link to="/o-apitere" style={dropdownItemStyle}>O Apitere</Link>
+                  <Link to="/nas-tim" style={dropdownItemStyle}>Náš tím</Link>
+                  <Link to="/nase-vcelnice" style={dropdownItemStyle}>Naše včelnice</Link>
+                </div>
+              )}
+            </div>
+
             <a href="/#aktivity" style={navItemStyle}>Aktivity</a>
             <Link to="/granty" style={navItemStyle}>Granty</Link>
             <a href="/#podpora" style={navItemStyle}>Podporte nás</a>
@@ -214,18 +215,17 @@ export default function OZApiteraWebsite() {
         </div>
       </header>
 
-     <Routes>
+      <Routes>
         <Route path="/" element={<HomePage />} />
-          <Route path="/o-nas" element={<OnasPage />} />
-            <Route path="/o-apitere" element={<OApiterePage />} />
-              <Route path="/nas-tim" element={<NasTimPage />} />
-                <Route path="/nase-vcelnice" element={<NaseVcelnicePage />} />
-                  <Route path="/granty" element={<GrantyPage />} />
-                  
+        <Route path="/o-nas" element={<OnasPage />} />
+        <Route path="/o-apitere" element={<OApiterePage />} />
+        <Route path="/nas-tim" element={<NasTimPage />} />
+        <Route path="/nase-vcelnice" element={<NaseVcelnicePage />} />
+        <Route path="/granty" element={<GrantyPage />} />
       </Routes>
-      <footer
 
-      style={{
+      <footer
+        style={{
           borderTop: "1px solid #eee",
           padding: "24px",
           textAlign: "center",
@@ -806,6 +806,7 @@ const navButtonStyle = {
   boxShadow: "0 6px 16px rgba(194,124,0,0.25)",
   whiteSpace: "nowrap",
 };
+
 const navDropdownTriggerStyle = {
   background: "transparent",
   border: "none",
@@ -821,7 +822,7 @@ const navDropdownTriggerStyle = {
 
 const dropdownMenuStyle = {
   position: "absolute",
-  top: "100%",
+  top: "calc(100% - 2px)",
   left: "0",
   minWidth: "190px",
   background: "#ffffff",
@@ -841,7 +842,7 @@ const dropdownItemStyle = {
   fontWeight: "bold",
   padding: "10px 12px",
   borderRadius: "10px",
-  whiteSpace: "nowrap",4
+  whiteSpace: "nowrap",
   display: "block",
 };
 

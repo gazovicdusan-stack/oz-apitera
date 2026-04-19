@@ -89,7 +89,7 @@ export default function OZApiteraWebsite() {
       >
         <div
   style={{
-    maxWidth: "1100px",
+    maxWidth: "1280px",
     margin: "0 auto",
     padding: "18px 24px",
     display: "flex",
@@ -128,6 +128,9 @@ export default function OZApiteraWebsite() {
     gap: "10px",
     flexWrap: "nowrap",
     marginLeft: "auto",
+    width: "fit-content",
+    minWidth: "560px",
+    justifyContent: "space-between",
     background: "rgba(255,255,255,0.9)",
     padding: "10px 12px",
     borderRadius: "18px",
@@ -720,6 +723,7 @@ const navItemStyle = {
   fontWeight: "bold",
   padding: "10px 14px",
   borderRadius: "12px",
+  whiteSpace: "nowrap",
 };
 
 const navButtonStyle = {
@@ -730,4 +734,5 @@ const navButtonStyle = {
   padding: "10px 16px",
   borderRadius: "12px",
   boxShadow: "0 6px 16px rgba(194,124,0,0.25)",
+  whiteSpace: "nowrap",
 };

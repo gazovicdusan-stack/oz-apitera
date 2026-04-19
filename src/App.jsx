@@ -208,15 +208,163 @@ function VedaVyskumPage() {
   return (
     <div style={pageWrapStyle}>
       <h1 style={pageTitleStyle}>Veda a výskum</h1>
+
       <p style={paragraphStyle}>
-        Táto stránka môže slúžiť na predstavenie odborných aktivít,
-        výskumných projektov, spolupráce s partnermi a tém, ktorým sa
-        OZ Apitera venuje v oblasti vedy a výskumu.
+        V tejto sekcii nájdete odborné výstupy, vedecké články a výskumné témy,
+        ktoré súvisia s apiterapiou, včelárstvom, zdravím, prírodou a
+        rekreačným cestovným ruchom.
       </p>
-      <p style={paragraphStyle}>
-        Môžete sem doplniť publikácie, výsledky, partnerov projektu,
-        zameranie výskumu aj pripravované odborné iniciatívy.
-      </p>
+
+      <div
+        style={{
+          marginTop: "40px",
+          background: "linear-gradient(to bottom right, #fffdf7, #fff6e5)",
+          border: "1px solid #ead7ac",
+          borderRadius: "26px",
+          padding: "34px",
+          boxShadow: "0 14px 34px rgba(138, 99, 20, 0.10)",
+        }}
+      >
+        <div
+          style={{
+            display: "inline-block",
+            fontSize: "13px",
+            fontWeight: "bold",
+            letterSpacing: "1px",
+            color: "#9b6300",
+            background: "#fff1cc",
+            padding: "8px 12px",
+            borderRadius: "999px",
+            marginBottom: "18px",
+          }}
+        >
+          VEDECKÝ ČLÁNOK
+        </div>
+
+        <h2
+          style={{
+            fontSize: "34px",
+            lineHeight: "1.3",
+            marginTop: 0,
+            marginBottom: "10px",
+            color: "#1f1f1f",
+          }}
+        >
+          Apiterapia ako inovatívny prvok rozvoja rekreačného cestovného ruchu
+        </h2>
+
+        <p
+          style={{
+            fontSize: "17px",
+            lineHeight: "1.8",
+            color: "#555",
+            marginBottom: "12px",
+          }}
+        >
+          <strong>Pôvodný názov:</strong>{" "}
+          APITHERAPY AS AN INNOVATIVE ELEMENT IN RECREATIONAL TOURISM DEVELOPMENT
+        </p>
+
+        <p
+          style={{
+            fontSize: "18px",
+            lineHeight: "1.8",
+            color: "#555",
+            marginBottom: "26px",
+            maxWidth: "920px",
+          }}
+        >
+          Štúdia sa zameriava na apiterapiu ako inovatívny prvok rekreačného
+          turizmu, pričom analyzuje skúsenosti 122 respondentov z rôznych
+          regiónov Slovenska, ktorí absolvovali terapiu v apidomčekoch.
+          Výsledky poukazujú na štatisticky významné zlepšenie psychickej aj
+          fyzickej pohody, ako aj zvýšenie pocitu relaxácie a komfortu počas a
+          po terapii. Zistenia zároveň naznačujú vysokú mieru akceptácie
+          apiterapie naprieč rôznymi skupinami návštevníkov a jej potenciál ako
+          súčasti udržateľného turizmu a regionálneho rozvoja. Štúdia poukazuje
+          na potrebu ďalšieho výskumu a zvyšovania povedomia o možnostiach
+          využitia apiterapie v oblasti cestovného ruchu.
+        </p>
+
+        <div
+          style={{
+            display: "flex",
+            gap: "14px",
+            flexWrap: "wrap",
+            marginBottom: "28px",
+          }}
+        >
+          <a
+            href="https://www.researchgate.net/publication/391287457_APITHERAPY_AS_AN_INNOVATIVE_ELEMENT_IN_RECREATIONAL_TOURISM_DEVELOPMENT"
+            target="_blank"
+            rel="noreferrer"
+            style={{
+              display: "inline-block",
+              background: "#c27c00",
+              color: "white",
+              textDecoration: "none",
+              fontWeight: "bold",
+              padding: "14px 22px",
+              borderRadius: "14px",
+              boxShadow: "0 6px 16px rgba(194,124,0,0.25)",
+            }}
+          >
+            Otvoriť článok
+          </a>
+
+          <a
+            href="https://doi.org/10.11118/978-80-7701-025-2-0034"
+            target="_blank"
+            rel="noreferrer"
+            style={{
+              display: "inline-block",
+              background: "#ffffff",
+              color: "#5a4214",
+              textDecoration: "none",
+              fontWeight: "bold",
+              padding: "14px 22px",
+              borderRadius: "14px",
+              border: "1px solid #ead7ac",
+            }}
+          >
+            Otvoriť DOI
+          </a>
+        </div>
+
+        <div
+          style={{
+            background: "#ffffff",
+            border: "1px solid #eadfbe",
+            borderRadius: "20px",
+            padding: "24px",
+          }}
+        >
+          <h3
+            style={{
+              marginTop: 0,
+              marginBottom: "14px",
+              fontSize: "22px",
+              color: "#5a4214",
+            }}
+          >
+            Citácia
+          </h3>
+
+          <p
+            style={{
+              margin: 0,
+              fontSize: "16px",
+              lineHeight: "1.85",
+              color: "#444",
+            }}
+          >
+            Maruniaková, A., Kvasničák, R., Iľko, I., &amp; Peterková, V. (2025).
+            <em> APITHERAPY AS AN INNOVATIVE ELEMENT IN RECREATIONAL TOURISM DEVELOPMENT</em>.
+            In <em>Public recreation and landscape protection - with respect hand in hand…</em>.
+            DOI: 10.11118/978-80-7701-025-2-0034
+          </p>
+        </div>
+      </div>
     </div>
   );
 }

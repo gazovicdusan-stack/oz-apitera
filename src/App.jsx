@@ -122,18 +122,19 @@ export default function OZApiteraWebsite() {
           </div>
 
           <nav
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "10px",
-              flexWrap: "wrap",
-              background: "rgba(255,255,255,0.9)",
-              padding: "10px 12px",
-              borderRadius: "18px",
-              border: "1px solid #eee",
-              boxShadow: "0 6px 20px rgba(0,0,0,0.05)",
-            }}
-          >
+  style={{
+    display: "flex",
+    alignItems: "center",
+    gap: "10px",
+    flexWrap: "nowrap",
+    marginLeft: "auto",
+    background: "rgba(255,255,255,0.9)",
+    padding: "10px 12px",
+    borderRadius: "18px",
+    border: "1px solid #eee",
+    boxShadow: "0 6px 20px rgba(0,0,0,0.05)",
+  }}
+>
             <a href="/" onClick={goHome} style={navItemStyle}>Domov</a>
             <Link to="/o-nas" style={navItemStyle}>O nás</Link>
             <a href="/#aktivity" style={navItemStyle}>Aktivity</a>

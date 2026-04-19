@@ -69,6 +69,7 @@ export default function OZApiteraWebsite() {
     boxShadow: "0 6px 20px rgba(0,0,0,0.05)",
   }}
 >
+  <a href="#" style={navItemStyle}>Domov</a>
   <a href="#o-nas" style={navItemStyle}>O nás</a>
   <a href="#aktivity" style={navItemStyle}>Aktivity</a>
   <a href="#podpora" style={navItemStyle}>Podporte nás</a>

@@ -132,7 +132,7 @@ export default function OZApiteraWebsite() {
             alt="Logo Apitera"
             style={{
               width: "150%",
-              maxWidth: "340px",
+              maxWidth: "500px",
               borderRadius: "20px",
               objectFit: "cover",
             }}

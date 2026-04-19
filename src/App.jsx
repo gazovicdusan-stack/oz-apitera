@@ -112,8 +112,9 @@ export default function OZApiteraWebsite() {
               maxWidth: "600px",
             }}
           >
-            Občianske združenie pre komunitu, pomoc a rozvoj. Podporujeme
-            zmysluplné projekty, spoluprácu a pozitívne zmeny v spoločnosti.
+            Občianske združenie Apitera vzniklo z presvedčenia, že včely a včelárstvo majú nezastupiteľný význam pre človeka, prírodu aj rovnováhu v krajine.
+            Zameriavame sa na podporu a rozvoj včelárstva, vzdelávanie a environmentálnu osvetu s dôrazom na udržateľný prístup k životnému prostrediu.
+            Prostredníctvom našich aktivít chceme prispievať k uchovávaniu tradícií, podpore vedeckého poznania a rozvoju včelárskej praxe pre budúce generácie.
           </p>
 
           <div style={{ display: "flex", gap: "14px", flexWrap: "wrap" }}>

@@ -541,17 +541,62 @@ export default function OZApiteraWebsite() {
         />
       </Routes>
 
-      <footer
-        style={{
-          borderTop: "1px solid #eee",
-          padding: "24px",
-          textAlign: "center",
-          color: "#777",
-          background: "#fffdf9",
-        }}
+    <footer
+  style={{
+    borderTop: "1px solid #eee",
+    padding: "24px",
+    textAlign: "center",
+    color: "#777",
+    background: "#fffdf9",
+  }}
+>
+  <div
+    style={{
+      display: "flex",
+      justifyContent: "center",
+      gap: "16px",
+      marginBottom: "14px",
+    }}
+  >
+    <a
+      href="https://www.facebook.com/profile.php?id=61583201130492"
+      target="_blank"
+      rel="noreferrer"
+      style={socialIconLinkStyle}
+      aria-label="Facebook"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="22"
+        height="22"
+        viewBox="0 0 24 24"
+        fill="currentColor"
       >
-        © 2025 OZ Apitera. Všetky práva vyhradené.
-      </footer>
+        <path d="M22 12.07C22 6.49 17.52 2 12 2S2 6.49 2 12.07C2 17.11 5.66 21.29 10.44 22v-7.06H7.9v-2.87h2.54V9.41c0-2.52 1.49-3.91 3.78-3.91 1.1 0 2.25.2 2.25.2v2.48h-1.27c-1.25 0-1.64.78-1.64 1.58v1.89h2.79l-.45 2.87h-2.34V22C18.34 21.29 22 17.11 22 12.07z" />
+      </svg>
+    </a>
+
+    <a
+      href="https://www.instagram.com/apitera.oz/"
+      target="_blank"
+      rel="noreferrer"
+      style={socialIconLinkStyle}
+      aria-label="Instagram"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="22"
+        height="22"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+      >
+        <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.8A3.95 3.95 0 0 0 3.8 7.75v8.5a3.95 3.95 0 0 0 3.95 3.95h8.5a3.95 3.95 0 0 0 3.95-3.95v-8.5a3.95 3.95 0 0 0-3.95-3.95h-8.5zm8.95 1.35a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2zM12 6.86A5.14 5.14 0 1 1 6.86 12 5.14 5.14 0 0 1 12 6.86zm0 1.8A3.34 3.34 0 1 0 15.34 12 3.34 3.34 0 0 0 12 8.66z" />
+      </svg>
+    </a>
+  </div>
+
+  <div>© 2025 OZ Apitera. Všetky práva vyhradené.</div>
+</footer>
     </div>
   );
 }
@@ -1132,4 +1177,18 @@ const educationTextStyle = {
   lineHeight: "1.7",
   color: "#555",
   margin: 0,
+};
+
+const socialIconLinkStyle = {
+  width: "44px",
+  height: "44px",
+  display: "inline-flex",
+  alignItems: "center",
+  justifyContent: "center",
+  borderRadius: "50%",
+  background: "#fff7e8",
+  color: "#9b6300",
+  border: "1px solid #ead7ac",
+  textDecoration: "none",
+  boxShadow: "0 6px 16px rgba(138, 99, 20, 0.10)",
 };

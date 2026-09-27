@@ -864,9 +864,7 @@ function HeroSection() {
             
             <div>
 
-              <div className="mobile-flip-hint">
-              Ťuknite na obrázok pre viac informácií
-              </div>
+              
 
               <h3 style={{ fontSize: "30px", marginBottom: "18px", color: "#9b6300" }}>
                 O našom združení
@@ -878,6 +876,11 @@ function HeroSection() {
             </div>
           </div>
         </div>
+
+<div className="mobile-flip-hint">
+              Ťuknite na obrázok pre viac informácií
+              </div>
+
       </div>
     </section>
   );

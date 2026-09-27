@@ -800,16 +800,18 @@ function HeroSection() {
       </div>
 
       <div
-        style={{
-          background: "white",
-          borderRadius: "28px",
-          padding: "24px",
-          boxShadow: "0 12px 35px rgba(0,0,0,0.12)",
-          textAlign: "center",
-          perspective: "1000px",
-        }}
-        onMouseEnter={() => setIsFlipped(true)}
-        onMouseLeave={() => setIsFlipped(false)}
+          style={{
+            background: "white",
+             borderRadius: "28px",
+             padding: "24px",
+             boxShadow: "0 12px 35px rgba(0,0,0,0.12)",
+             textAlign: "center",
+             perspective: "1000px",
+             cursor: "pointer",
+  }}
+  onMouseEnter={() => setIsFlipped(true)}
+  onMouseLeave={() => setIsFlipped(false)}
+  onClick={() => setIsFlipped((prev) => !prev)}
       >
         <div
           className="hero-card"
@@ -859,7 +861,11 @@ function HeroSection() {
               boxSizing: "border-box",
             }}
           >
+            <div className="mobile-flip-hint">
+              Ťuknite na obrázok pre viac informácií
+           </div>
             <div>
+
               <h3 style={{ fontSize: "30px", marginBottom: "18px", color: "#9b6300" }}>
                 O našom združení
               </h3>

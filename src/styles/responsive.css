@@ -1,120 +1,43 @@
-/* =========================
-   TABLETY
-   ========================= */
+/* =========================================================
+   OZ APITERA - RESPONZÍVNY DIZAJN
+   ========================================================= */
 
-@media (max-width: 1024px) {
 
-  .header-inner {
-    padding-left: 18px !important;
-    padding-right: 18px !important;
-  }
+/* =========================================================
+   ZÁKLADNÁ OCHRANA
+   ========================================================= */
 
-  .main-nav {
-    min-width: 0 !important;
-    gap: 6px !important;
-  }
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
-  .header-logo {
-    width: 90px !important;
-    height: 90px !important;
-  }
+* {
+  box-sizing: border-box;
+}
 
-  .hero-section {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-  }
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+p,
+a,
+span {
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 
 
-/* =========================
-   MOBILY
-   ========================= */
-
-@media (max-width: 768px) {
-
-  .header-inner {
-    flex-direction: column !important;
-    align-items: stretch !important;
-    gap: 14px !important;
-  }
-
-  .brand-area {
-    justify-content: center !important;
-  }
-
-  .main-nav {
-   display: none !important;
-  }
-
-  .header-logo {
-    width: 72px !important;
-    height: 72px !important;
-  }
-
-  .hero-section {
-    grid-template-columns: 1fr !important;
-    padding-top: 40px !important;
-    padding-bottom: 40px !important;
-  }
-
-  .hero-text {
-    text-align: center;
-  }
-
-  .hero-card {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .aktuality-section {
-    padding: 50px 18px !important;
-  }
-
-  .podpora-section {
-    padding: 50px 18px !important;
-  }
-
-  .kontakt-section {
-    padding: 50px 18px !important;
-  }
-}
-
-
-/* =========================
-   MALÉ MOBILY
-   ========================= */
-
-@media (max-width: 480px) {
-
-  .header-inner {
-    padding: 10px !important;
-  }
-
-  .header-logo {
-    width: 64px !important;
-    height: 64px !important;
-  }
-
-  .main-nav {
-    font-size: 14px;
-  }
-
-  .hero-section {
-    padding-left: 14px !important;
-    padding-right: 14px !important;
-  }
-
-  .aktuality-section,
-  .podpora-section,
-  .kontakt-section {
-    padding-left: 14px !important;
-    padding-right: 14px !important;
-  }
-}
-
-/* =========================
-   MOBILNÉ MENU
-   ========================= */
+/* =========================================================
+   MOBILNÉ MENU - DESKTOP ZÁKLAD
+   ========================================================= */
 
 .mobile-menu-button {
   display: none;
@@ -124,471 +47,20 @@
   display: none;
 }
 
-
-/* =========================
-   TABLET + MOBIL
-   ========================= */
-
-@media (max-width: 768px) {
-
-  .main-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-
-  .header-inner {
-    position: relative;
-  }
-
-  /* Desktop menu schováme */
-  .main-nav {
-    display: none !important;
-  }
-
-  /* Hamburger zobrazíme */
-  .mobile-menu-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 48px;
-    height: 48px;
-
-    position: absolute;
-    right: 18px;
-    top: 18px;
-
-    background: #fff7e8;
-    color: #9b6300;
-
-    border: 1px solid #ead7ac;
-    border-radius: 14px;
-
-    font-size: 28px;
-    line-height: 1;
-    
-    cursor: pointer;
-
-    box-shadow: 0 6px 16px rgba(138, 99, 20, 0.12);
-  }
-
-  .brand-area {
-    justify-content: flex-start !important;
-    padding-right: 70px;
-  }
-
-  .mobile-menu {
-    display: flex;
-    flex-direction: column;
-
-    width: 100%;
-    box-sizing: border-box;
-
-    margin-top: 12px;
-    padding: 14px;
-
-    background: linear-gradient(to bottom, #fffdf7, #fff7e8);
-
-    border: 1px solid #ead7ac;
-    border-radius: 18px;
-
-    box-shadow: 0 12px 28px rgba(138, 99, 20, 0.14);
-  }
-
-  .mobile-menu-item {
-    text-decoration: none;
-
-    color: #5a4214;
-    font-weight: bold;
-
-    padding: 14px 16px;
-
-    border-bottom: 1px solid #f1e4c8;
-  }
-
-  .mobile-menu-dropdown-button {
-    width: 100%;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid #f1e4c8;
-
-    color: #5a4214;
-
-    font-size: 16px;
-    font-weight: bold;
-
-    padding: 14px 16px;
-
-    cursor: pointer;
-  }
-
-  .mobile-submenu {
-    display: flex;
-    flex-direction: column;
-
-    margin: 6px 0 10px;
-    padding: 6px;
-
-    background: rgba(255, 255, 255, 0.7);
-
-    border-radius: 14px;
-  }
-
-  .mobile-submenu-item {
-    text-decoration: none;
-
-    color: #6a5528;
-
-    padding: 12px 16px;
-
-    border-radius: 10px;
-
-    font-size: 15px;
-  }
-
-  .mobile-menu-contact {
-    margin-top: 10px;
-
-    text-decoration: none;
-    text-align: center;
-
-    background: #c27c00;
-    color: white;
-
-    font-weight: bold;
-
-    padding: 14px 18px;
-
-    border-radius: 14px;
-
-    box-shadow: 0 6px 16px rgba(194, 124, 0, 0.25);
-  }
-}
 .mobile-flip-hint {
   display: none;
 }
 
-@media (max-width: 768px) {
-  .mobile-flip-hint {
-    display: block;
-    margin-top: 12px;
-    font-size: 14px;
-    color: #8a6a2b;
-    text-align: center;
-  }
-}
 
-/* =========================
-   TYPOGRAFIA A OBSAH
-   ========================= */
-
-@media (max-width: 768px) {
-  h1 {
-    font-size: 38px !important;
-    line-height: 1.15 !important;
-  }
-
-  h2 {
-    font-size: 30px !important;
-    line-height: 1.2 !important;
-  }
-
-  h3 {
-    font-size: 22px !important;
-  }
-
-  p {
-    font-size: 16px !important;
-    line-height: 1.7 !important;
-  }
-
-  .hero-section {
-    gap: 24px !important;
-  }
-
-  .hero-card {
-    padding: 16px !important;
-    border-radius: 22px !important;
-  }
-
-  .hero-card img {
-    max-width: 100% !important;
-    height: auto !important;
-  }
-
-  .hero-text a {
-    width: 100%;
-    box-sizing: border-box;
-    text-align: center;
-  }
-
-  .hero-text > div:last-child {
-    flex-direction: column !important;
-  }
-}
-
-@media (max-width: 480px) {
-  h1 {
-    font-size: 32px !important;
-  }
-
-  h2 {
-    font-size: 27px !important;
-  }
-
-  h3 {
-    font-size: 20px !important;
-  }
-
-  p {
-    font-size: 15px !important;
-  }
-
-  .hero-card {
-    padding: 12px !important;
-  }
-}
-
-/* =========================
-   SAMOSTATNÉ STRÁNKY
-   ========================= */
-
-@media (max-width: 768px) {
-  .page-mobile-wrap {
-    padding: 40px 16px !important;
-  }
-
-  .article-card {
-    padding: 20px !important;
-    border-radius: 20px !important;
-  }
-
-  .article-actions {
-    flex-direction: column !important;
-  }
-
-  .article-actions a {
-    width: 100% !important;
-    box-sizing: border-box;
-    text-align: center;
-  }
-
-  .education-grid {
-    grid-template-columns: 1fr !important;
-  }
-
-  .contact-grid {
-    grid-template-columns: 1fr !important;
-  }
-
-  .contact-form-box {
-    padding: 20px !important;
-  }
-}
-
-/* =========================
-   AKTUALITY - MOBIL
-   ========================= */
-
-@media (max-width: 768px) {
-  .aktuality-section > div {
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .aktuality-section h2 {
-    text-align: center;
-  }
-
-  .aktuality-section p {
-    text-align: left;
-  }
-}
-
-
-/* =========================
-   PODPORTE NÁS - MOBIL
-   ========================= */
-
-@media (max-width: 768px) {
-  .podpora-section > div {
-    grid-template-columns: 1fr !important;
-    gap: 22px !important;
-  }
-
-  .podpora-section h2 {
-    text-align: center;
-  }
-
-  .podpora-section ul {
-    padding-left: 22px !important;
-    font-size: 16px !important;
-  }
-
-  .podpora-section > div > div:last-child {
-    padding: 22px !important;
-  }
-}
-
-
-/* =========================
-   KONTAKT - MOBIL
-   ========================= */
-
-@media (max-width: 768px) {
-  .contact-grid {
-    grid-template-columns: 1fr !important;
-    gap: 24px !important;
-  }
-
-  .contact-form-box {
-    padding: 20px !important;
-    border-radius: 18px !important;
-  }
-
-  .contact-form-box input,
-  .contact-form-box textarea,
-  .contact-form-box button {
-    width: 100% !important;
-    box-sizing: border-box;
-  }
-}
-
-
-/* =========================
-   FOOTER - MOBIL
-   ========================= */
-
-@media (max-width: 768px) {
-  footer {
-    padding: 22px 16px !important;
-  }
-
-  footer > div:first-child {
-    gap: 12px !important;
-  }
-
-  footer svg {
-    width: 20px;
-    height: 20px;
-  }
-}
-
-
-/* =========================
-   MALÉ MOBILY
-   ========================= */
-
-@media (max-width: 480px) {
-  .aktuality-section {
-    padding-top: 40px !important;
-    padding-bottom: 40px !important;
-  }
-
-  .podpora-section {
-    padding-top: 40px !important;
-    padding-bottom: 40px !important;
-  }
-
-  .kontakt-section {
-    padding-top: 40px !important;
-    padding-bottom: 40px !important;
-  }
-
-  .contact-form-box {
-    padding: 16px !important;
-  }
-
-  footer {
-    font-size: 14px;
-  }
-}
-@media (max-width: 768px) {
-  .aktualita-card {
-    padding: 20px !important;
-    border-radius: 18px !important;
-  }
-}
-/* =========================
-   HERO KARTA - MOBIL
-   ========================= */
-
-@media (max-width: 768px) {
-  .hero-card {
-    padding: 14px !important;
-  }
-
-  .hero-flip-inner {
-    height: 360px !important;
-  }
-
-  .hero-card img {
-    max-width: 320px !important;
-    width: 100% !important;
-    height: auto !important;
-  }
-
-  .hero-card h3 {
-    font-size: 26px !important;
-    margin-bottom: 14px !important;
-  }
-
-  .hero-card p {
-    font-size: 16px !important;
-    line-height: 1.6 !important;
-  }
-
-  .mobile-flip-hint {
-    margin-top: 10px;
-    font-size: 13px;
-  }
-}
-
-
-/* =========================
-   HERO KARTA - MALÝ MOBIL
-   ========================= */
-
-@media (max-width: 480px) {
-  .hero-flip-inner {
-    height: 300px !important;
-  }
-
-  .hero-card img {
-    max-width: 260px !important;
-  }
-
-  .hero-card h3 {
-    font-size: 23px !important;
-  }
-
-  .hero-card p {
-    font-size: 15px !important;
-  }
-}
-@media (max-width: 768px) {
-  .hero-back {
-    padding: 20px !important;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-back {
-    padding: 14px !important;
-  }
-}
-
-/* =========================
-   TABLET - 769px až 1024px
-   ========================= */
+/* =========================================================
+   TABLET
+   769px - 1024px
+   ========================================================= */
 
 @media (min-width: 769px) and (max-width: 1024px) {
+
+  /* HEADER */
+
   .header-inner {
     padding: 14px 18px !important;
     gap: 14px !important;
@@ -611,16 +83,33 @@
     font-size: 12px !important;
   }
 
+
+  /* DESKTOP MENU NA TABLETE */
+
   .main-nav {
     min-width: 0 !important;
     gap: 4px !important;
     padding: 8px 10px !important;
   }
 
+  .main-nav a,
+  .main-nav button {
+    font-size: 14px !important;
+    padding: 8px 10px !important;
+  }
+
+
+  /* HERO */
+
   .hero-section {
     grid-template-columns: 1fr 1fr !important;
     gap: 28px !important;
-    padding: 56px 20px 46px !important;
+
+    padding-top: 56px !important;
+    padding-bottom: 46px !important;
+
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
 
   .hero-text h1 {
@@ -643,6 +132,9 @@
     max-width: 340px !important;
   }
 
+
+  /* SAMOSTATNÉ STRÁNKY */
+
   .page-mobile-wrap {
     padding: 56px 22px !important;
   }
@@ -651,14 +143,714 @@
     padding: 26px !important;
   }
 
+
+  /* KONTAKT */
+
   .contact-grid {
     gap: 24px !important;
   }
 }
-@media (min-width: 769px) and (max-width: 1024px) {
-  .main-nav a,
-  .main-nav button {
-    font-size: 14px !important;
-    padding: 8px 10px !important;
+
+
+/* =========================================================
+   MOBIL
+   max 768px
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  /* =======================================================
+     TYPOGRAFIA
+     ======================================================= */
+
+  h1 {
+    font-size: 38px !important;
+    line-height: 1.15 !important;
+  }
+
+  h2 {
+    font-size: 30px !important;
+    line-height: 1.2 !important;
+  }
+
+  h3 {
+    font-size: 22px !important;
+  }
+
+  p {
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+  }
+
+
+  /* =======================================================
+     HEADER
+     ======================================================= */
+
+  .main-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .header-inner {
+    position: relative;
+
+    flex-direction: column !important;
+    align-items: stretch !important;
+
+    gap: 14px !important;
+
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  .brand-area {
+    justify-content: flex-start !important;
+    padding-right: 70px;
+  }
+
+  .header-logo {
+    width: 72px !important;
+    height: 72px !important;
+  }
+
+
+  /* =======================================================
+     DESKTOP MENU SCHOVÁME
+     ======================================================= */
+
+  .main-nav {
+    display: none !important;
+  }
+
+
+  /* =======================================================
+     HAMBURGER
+     ======================================================= */
+
+  .mobile-menu-button {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    position: absolute;
+
+    right: 18px;
+    top: 18px;
+
+    background: #fff7e8;
+    color: #9b6300;
+
+    border: 1px solid #ead7ac;
+    border-radius: 14px;
+
+    font-size: 28px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    box-shadow:
+      0 6px 16px rgba(138, 99, 20, 0.12);
+
+    z-index: 100;
+  }
+
+
+  /* =======================================================
+     OTVORENÉ MOBILNÉ MENU
+     ======================================================= */
+
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    box-sizing: border-box;
+
+    margin-top: 12px;
+    padding: 14px;
+
+    background:
+      linear-gradient(
+        to bottom,
+        #fffdf7,
+        #fff7e8
+      );
+
+    border:
+      1px solid #ead7ac;
+
+    border-radius: 18px;
+
+    box-shadow:
+      0 12px 28px rgba(138, 99, 20, 0.14);
+  }
+
+
+  .mobile-menu-item {
+    text-decoration: none;
+
+    color: #5a4214;
+
+    font-weight: bold;
+
+    padding: 14px 16px;
+
+    border-bottom:
+      1px solid #f1e4c8;
+
+    min-height: 44px;
+  }
+
+
+  .mobile-menu-dropdown-button {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    background: transparent;
+
+    border: none;
+
+    border-bottom:
+      1px solid #f1e4c8;
+
+    color: #5a4214;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    padding: 14px 16px;
+
+    cursor: pointer;
+
+    min-height: 44px;
+  }
+
+
+  /* =======================================================
+     MOBILNÉ PODMENU
+     ======================================================= */
+
+  .mobile-submenu {
+    display: flex;
+    flex-direction: column;
+
+    margin:
+      6px 0 10px;
+
+    padding: 6px;
+
+    background:
+      rgba(255, 255, 255, 0.7);
+
+    border-radius: 14px;
+  }
+
+
+  .mobile-submenu-item {
+    text-decoration: none;
+
+    color: #6a5528;
+
+    padding: 12px 16px;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+
+    min-height: 44px;
+  }
+
+
+  /* =======================================================
+     KONTAKT V MENU
+     ======================================================= */
+
+  .mobile-menu-contact {
+    margin-top: 10px;
+
+    text-decoration: none;
+
+    text-align: center;
+
+    background: #c27c00;
+
+    color: white;
+
+    font-weight: bold;
+
+    padding: 14px 18px;
+
+    border-radius: 14px;
+
+    box-shadow:
+      0 6px 16px rgba(194, 124, 0, 0.25);
+
+    min-height: 44px;
+  }
+
+
+  /* =======================================================
+     HERO
+     ======================================================= */
+
+  .hero-section {
+    grid-template-columns:
+      minmax(0, 1fr) !important;
+
+    gap: 24px !important;
+
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+
+  /* TLAČIDLÁ HERO */
+
+  .hero-text a {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    text-align: center;
+  }
+
+  .hero-text > div:last-child {
+    flex-direction: column !important;
+  }
+
+
+  /* =======================================================
+     OTOČNÁ HERO KARTA
+     ======================================================= */
+
+  .hero-card {
+    width: 100%;
+
+    max-width: 100%;
+
+    padding: 14px !important;
+
+    border-radius: 22px !important;
+  }
+
+  .hero-flip-inner {
+    height: 360px !important;
+  }
+
+  .hero-card img {
+    width: 100% !important;
+
+    max-width: 320px !important;
+
+    height: auto !important;
+  }
+
+  .hero-card h3 {
+    font-size: 26px !important;
+
+    margin-bottom: 14px !important;
+  }
+
+  .hero-card p {
+    font-size: 16px !important;
+
+    line-height: 1.6 !important;
+  }
+
+  .hero-back {
+    padding: 20px !important;
+  }
+
+
+  /* TEXT POD OTOČNOU KARTOU */
+
+  .mobile-flip-hint {
+    display: block;
+
+    margin-top: 10px;
+
+    font-size: 13px;
+
+    color: #8a6a2b;
+
+    text-align: center;
+  }
+
+
+  /* =======================================================
+     SAMOSTATNÉ STRÁNKY
+     ======================================================= */
+
+  .page-mobile-wrap {
+    width: 100% !important;
+
+    max-width: 100% !important;
+
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+
+  /* =======================================================
+     VZDELÁVANIE
+     ======================================================= */
+
+  .education-grid {
+    width: 100% !important;
+
+    grid-template-columns:
+      minmax(0, 1fr) !important;
+  }
+
+
+  /* =======================================================
+     VEDA A VÝSKUM
+     ======================================================= */
+
+  .article-card {
+    width: 100% !important;
+
+    max-width: 100% !important;
+
+    padding: 20px !important;
+
+    border-radius: 20px !important;
+  }
+
+  .article-card h2 {
+    font-size: 26px !important;
+
+    line-height: 1.3 !important;
+  }
+
+  .article-card p {
+    overflow-wrap: anywhere;
+  }
+
+
+  /* TLAČIDLÁ ČLÁNKU */
+
+  .article-actions {
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    gap: 10px !important;
+  }
+
+  .article-actions a {
+    display: block !important;
+
+    width: 100% !important;
+
+    box-sizing: border-box !important;
+
+    text-align: center !important;
+  }
+
+
+  /* =======================================================
+     AKTUALITY
+     ======================================================= */
+
+  .aktuality-section {
+    padding: 50px 18px !important;
+  }
+
+  .aktuality-section > div {
+    width: 100%;
+
+    box-sizing: border-box;
+  }
+
+  .aktuality-section h2 {
+    text-align: center;
+  }
+
+  .aktuality-section p {
+    text-align: left;
+  }
+
+  .aktualita-card {
+    padding: 20px !important;
+
+    border-radius: 18px !important;
+  }
+
+
+  /* =======================================================
+     PODPORTE NÁS
+     ======================================================= */
+
+  .podpora-section {
+    padding: 50px 18px !important;
+  }
+
+  .podpora-section > div {
+    grid-template-columns:
+      minmax(0, 1fr) !important;
+
+    gap: 22px !important;
+  }
+
+  .podpora-section h2 {
+    text-align: center;
+  }
+
+  .podpora-section ul {
+    padding-left: 22px !important;
+
+    font-size: 16px !important;
+  }
+
+  .podpora-section > div > div:last-child {
+    padding: 22px !important;
+  }
+
+
+  /* =======================================================
+     KONTAKT
+     ======================================================= */
+
+  .kontakt-section {
+    padding: 50px 18px !important;
+  }
+
+  .contact-grid {
+    width: 100% !important;
+
+    grid-template-columns:
+      minmax(0, 1fr) !important;
+
+    gap: 24px !important;
+  }
+
+  .contact-form-box {
+    padding: 20px !important;
+
+    border-radius: 18px !important;
+  }
+
+  .contact-form-box input,
+  .contact-form-box textarea,
+  .contact-form-box button {
+    width: 100% !important;
+
+    box-sizing: border-box;
+  }
+
+
+  /* =======================================================
+     FOOTER
+     ======================================================= */
+
+  footer {
+    padding:
+      22px 16px !important;
+  }
+
+  footer > div:first-child {
+    gap: 12px !important;
+  }
+
+  footer svg {
+    width: 20px;
+
+    height: 20px;
+  }
+}
+
+
+/* =========================================================
+   MALÉ MOBILY
+   max 480px
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  /* TYPOGRAFIA */
+
+  h1 {
+    font-size: 32px !important;
+  }
+
+  h2 {
+    font-size: 27px !important;
+  }
+
+  h3 {
+    font-size: 20px !important;
+  }
+
+  p {
+    font-size: 15px !important;
+  }
+
+
+  /* HEADER */
+
+  .header-inner {
+    padding: 10px !important;
+  }
+
+  .header-logo {
+    width: 64px !important;
+
+    height: 64px !important;
+  }
+
+
+  /* HAMBURGER */
+
+  .mobile-menu-button {
+    right: 12px;
+
+    top: 14px;
+
+    width: 44px;
+
+    height: 44px;
+
+    font-size: 25px;
+  }
+
+
+  /* MENU */
+
+  .mobile-menu {
+    padding: 10px !important;
+  }
+
+
+  /* HERO */
+
+  .hero-section {
+    padding-left: 14px !important;
+
+    padding-right: 14px !important;
+  }
+
+  .hero-card {
+    padding: 12px !important;
+  }
+
+  .hero-flip-inner {
+    height: 300px !important;
+  }
+
+  .hero-card img {
+    max-width: 260px !important;
+  }
+
+  .hero-card h3 {
+    font-size: 23px !important;
+  }
+
+  .hero-card p {
+    font-size: 15px !important;
+  }
+
+  .hero-back {
+    padding: 14px !important;
+  }
+
+
+  /* STRÁNKY */
+
+  .page-mobile-wrap {
+    padding-left: 14px !important;
+
+    padding-right: 14px !important;
+  }
+
+
+  /* VEDA A VÝSKUM */
+
+  .article-card {
+    padding: 16px !important;
+  }
+
+  .article-card h2 {
+    font-size: 23px !important;
+  }
+
+
+  /* VZDELÁVANIE */
+
+  .education-grid {
+    gap: 14px !important;
+  }
+
+
+  /* AKTUALITY */
+
+  .aktuality-section {
+    padding-top: 40px !important;
+
+    padding-bottom: 40px !important;
+
+    padding-left: 14px !important;
+
+    padding-right: 14px !important;
+  }
+
+
+  /* PODPORA */
+
+  .podpora-section {
+    padding-top: 40px !important;
+
+    padding-bottom: 40px !important;
+
+    padding-left: 14px !important;
+
+    padding-right: 14px !important;
+  }
+
+
+  /* KONTAKT */
+
+  .kontakt-section {
+    padding-top: 40px !important;
+
+    padding-bottom: 40px !important;
+
+    padding-left: 14px !important;
+
+    padding-right: 14px !important;
+  }
+
+  .contact-form-box {
+    padding: 16px !important;
+  }
+
+
+  /* FOOTER */
+
+  footer {
+    font-size: 14px;
   }
 }

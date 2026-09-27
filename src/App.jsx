@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 import {
   Routes,
   Route,
@@ -1419,7 +1420,6 @@ function AktualitySection() {
 
 
         <div
-          className="aktualita-card"
           style={{
             display: "grid",
             gridTemplateColumns:
@@ -1469,6 +1469,7 @@ function AktualitaCard({
 }) {
   return (
     <div
+      className="aktualita-card"
       style={{
         background: "#fff",
         borderRadius: "22px",

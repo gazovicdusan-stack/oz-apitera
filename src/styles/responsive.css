@@ -515,3 +515,71 @@
     border-radius: 18px !important;
   }
 }
+/* =========================
+   HERO KARTA - MOBIL
+   ========================= */
+
+@media (max-width: 768px) {
+  .hero-card {
+    padding: 14px !important;
+  }
+
+  .hero-flip-inner {
+    height: 360px !important;
+  }
+
+  .hero-card img {
+    max-width: 320px !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .hero-card h3 {
+    font-size: 26px !important;
+    margin-bottom: 14px !important;
+  }
+
+  .hero-card p {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+  }
+
+  .mobile-flip-hint {
+    margin-top: 10px;
+    font-size: 13px;
+  }
+}
+
+
+/* =========================
+   HERO KARTA - MALÝ MOBIL
+   ========================= */
+
+@media (max-width: 480px) {
+  .hero-flip-inner {
+    height: 300px !important;
+  }
+
+  .hero-card img {
+    max-width: 260px !important;
+  }
+
+  .hero-card h3 {
+    font-size: 23px !important;
+  }
+
+  .hero-card p {
+    font-size: 15px !important;
+  }
+}
+@media (max-width: 768px) {
+  .hero-back {
+    padding: 20px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-back {
+    padding: 14px !important;
+  }
+}

@@ -1322,6 +1322,7 @@ function HeroSection() {
           {/* ZADNÁ STRANA */}
 
           <div
+            className="hero-back"
             style={{
               position: "absolute",
               width: "100%",

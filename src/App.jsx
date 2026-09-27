@@ -1418,6 +1418,7 @@ function AktualitySection() {
 
 
         <div
+          className="aktualita-card"
           style={{
             display: "grid",
             gridTemplateColumns:

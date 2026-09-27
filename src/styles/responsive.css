@@ -354,3 +354,164 @@
     padding: 12px !important;
   }
 }
+
+/* =========================
+   SAMOSTATNÉ STRÁNKY
+   ========================= */
+
+@media (max-width: 768px) {
+  .page-mobile-wrap {
+    padding: 40px 16px !important;
+  }
+
+  .article-card {
+    padding: 20px !important;
+    border-radius: 20px !important;
+  }
+
+  .article-actions {
+    flex-direction: column !important;
+  }
+
+  .article-actions a {
+    width: 100% !important;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .education-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .contact-form-box {
+    padding: 20px !important;
+  }
+}
+
+/* =========================
+   AKTUALITY - MOBIL
+   ========================= */
+
+@media (max-width: 768px) {
+  .aktuality-section > div {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .aktuality-section h2 {
+    text-align: center;
+  }
+
+  .aktuality-section p {
+    text-align: left;
+  }
+}
+
+
+/* =========================
+   PODPORTE NÁS - MOBIL
+   ========================= */
+
+@media (max-width: 768px) {
+  .podpora-section > div {
+    grid-template-columns: 1fr !important;
+    gap: 22px !important;
+  }
+
+  .podpora-section h2 {
+    text-align: center;
+  }
+
+  .podpora-section ul {
+    padding-left: 22px !important;
+    font-size: 16px !important;
+  }
+
+  .podpora-section > div > div:last-child {
+    padding: 22px !important;
+  }
+}
+
+
+/* =========================
+   KONTAKT - MOBIL
+   ========================= */
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .contact-form-box {
+    padding: 20px !important;
+    border-radius: 18px !important;
+  }
+
+  .contact-form-box input,
+  .contact-form-box textarea,
+  .contact-form-box button {
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+}
+
+
+/* =========================
+   FOOTER - MOBIL
+   ========================= */
+
+@media (max-width: 768px) {
+  footer {
+    padding: 22px 16px !important;
+  }
+
+  footer > div:first-child {
+    gap: 12px !important;
+  }
+
+  footer svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+
+/* =========================
+   MALÉ MOBILY
+   ========================= */
+
+@media (max-width: 480px) {
+  .aktuality-section {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  }
+
+  .podpora-section {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  }
+
+  .kontakt-section {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  }
+
+  .contact-form-box {
+    padding: 16px !important;
+  }
+
+  footer {
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  .aktualita-card {
+    padding: 20px !important;
+    border-radius: 18px !important;
+  }
+}

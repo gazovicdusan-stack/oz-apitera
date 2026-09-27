@@ -417,7 +417,8 @@ export default function OZApiteraWebsite() {
       }}
     >
       <header
-        style={{
+        className="main-header"
+         style={{
           position: "sticky",
           top: 0,
           background: "rgba(255,255,255,0.95)",
@@ -427,6 +428,7 @@ export default function OZApiteraWebsite() {
         }}
       >
         <div
+          className="header-inner"
           style={{
             maxWidth: "1280px",
             margin: "0 auto",
@@ -438,8 +440,12 @@ export default function OZApiteraWebsite() {
             gap: "20px",
           }}
         >
-          <div style={{ display: "flex", alignItems: "center", gap: "14px" }}>
+          <div 
+          className="brand-area"
+          style={{ display: "flex", alignItems: "center", gap: "14px" }}>
+
             <img
+              className="header-logo"
               src="/logo.jpg"
               alt="Logo OZ Apitera"
               style={{
@@ -461,6 +467,7 @@ export default function OZApiteraWebsite() {
           </div>
 
           <nav
+            className="main-nav"
             style={{
               display: "flex",
               alignItems: "center",
@@ -606,6 +613,7 @@ function HeroSection() {
 
   return (
     <section
+      className="hero-section"
       style={{
         maxWidth: "1100px",
         margin: "0 auto",
@@ -616,7 +624,7 @@ function HeroSection() {
         alignItems: "center",
       }}
     >
-      <div>
+      <div className="hero-text">
         <div
           style={{
             display: "inline-block",
@@ -677,6 +685,7 @@ function HeroSection() {
         onMouseLeave={() => setIsFlipped(false)}
       >
         <div
+          className="hero-card"
           style={{
             position: "relative",
             width: "100%",
@@ -743,6 +752,7 @@ function AktualitySection() {
   return (
     <section
       id="aktivity"
+      className="aktuality-section"
       style={{
         ...sectionStyle,
         background: "#fffaf0",

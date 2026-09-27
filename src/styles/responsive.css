@@ -1,0 +1,117 @@
+/* =========================
+   TABLETY
+   ========================= */
+
+@media (max-width: 1024px) {
+
+  .header-inner {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  .main-nav {
+    min-width: 0 !important;
+    gap: 6px !important;
+  }
+
+  .header-logo {
+    width: 90px !important;
+    height: 90px !important;
+  }
+
+  .hero-section {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+
+/* =========================
+   MOBILY
+   ========================= */
+
+@media (max-width: 768px) {
+
+  .header-inner {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 14px !important;
+  }
+
+  .brand-area {
+    justify-content: center !important;
+  }
+
+  .main-nav {
+    width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: auto;
+    justify-content: flex-start !important;
+    padding: 8px !important;
+  }
+
+  .header-logo {
+    width: 72px !important;
+    height: 72px !important;
+  }
+
+  .hero-section {
+    grid-template-columns: 1fr !important;
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .aktuality-section {
+    padding: 50px 18px !important;
+  }
+
+  .podpora-section {
+    padding: 50px 18px !important;
+  }
+
+  .kontakt-section {
+    padding: 50px 18px !important;
+  }
+}
+
+
+/* =========================
+   MALÉ MOBILY
+   ========================= */
+
+@media (max-width: 480px) {
+
+  .header-inner {
+    padding: 10px !important;
+  }
+
+  .header-logo {
+    width: 64px !important;
+    height: 64px !important;
+  }
+
+  .main-nav {
+    font-size: 14px;
+  }
+
+  .hero-section {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+
+  .aktuality-section,
+  .podpora-section,
+  .kontakt-section {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+}

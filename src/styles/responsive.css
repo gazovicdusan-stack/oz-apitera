@@ -283,3 +283,74 @@
     text-align: center;
   }
 }
+
+/* =========================
+   TYPOGRAFIA A OBSAH
+   ========================= */
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 38px !important;
+    line-height: 1.15 !important;
+  }
+
+  h2 {
+    font-size: 30px !important;
+    line-height: 1.2 !important;
+  }
+
+  h3 {
+    font-size: 22px !important;
+  }
+
+  p {
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+  }
+
+  .hero-section {
+    gap: 24px !important;
+  }
+
+  .hero-card {
+    padding: 16px !important;
+    border-radius: 22px !important;
+  }
+
+  .hero-card img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  .hero-text a {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .hero-text > div:last-child {
+    flex-direction: column !important;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 32px !important;
+  }
+
+  h2 {
+    font-size: 27px !important;
+  }
+
+  h3 {
+    font-size: 20px !important;
+  }
+
+  p {
+    font-size: 15px !important;
+  }
+
+  .hero-card {
+    padding: 12px !important;
+  }
+}

@@ -157,8 +157,7 @@
 
     position: absolute;
     right: 18px;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 18px;
 
     background: #fff7e8;
     color: #9b6300;
@@ -167,6 +166,8 @@
     border-radius: 14px;
 
     font-size: 28px;
+    line-height: 1;
+    
     cursor: pointer;
 
     box-shadow: 0 6px 16px rgba(138, 99, 20, 0.12);

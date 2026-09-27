@@ -375,6 +375,10 @@ export default function OZApiteraWebsite() {
   const [showAboutMenu, setShowAboutMenu] = useState(false);
   const [showActivitiesMenu, setShowActivitiesMenu] = useState(false);
 
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const [showMobileAbout, setShowMobileAbout] = useState(false);
+  const [showMobileActivities, setShowMobileActivities] = useState(false);
+
   const goHome = (e) => {
     e.preventDefault();
 
@@ -466,6 +470,15 @@ export default function OZApiteraWebsite() {
             </div>
           </div>
 
+            <button
+              type="button"
+              className="mobile-menu-button"
+              onClick={() => setShowMobileMenu(!showMobileMenu)}
+              aria-label="Otvoriť menu"
+            >
+              {showMobileMenu ? "✕" : "☰"}
+            </button>
+
           <nav
             className="main-nav"
             style={{
@@ -529,6 +542,120 @@ export default function OZApiteraWebsite() {
               Kontakt
             </a>
           </nav>
+
+{showMobileMenu && (
+  <div className="mobile-menu">
+
+    <a
+      href="/"
+      onClick={(e) => {
+        goHome(e);
+        setShowMobileMenu(false);
+      }}
+      className="mobile-menu-item"
+    >
+      Domov
+    </a>
+
+    <button
+      type="button"
+      className="mobile-menu-dropdown-button"
+      onClick={() => setShowMobileAbout(!showMobileAbout)}
+    >
+      <span>O nás</span>
+      <span>{showMobileAbout ? "−" : "+"}</span>
+    </button>
+
+    {showMobileAbout && (
+      <div className="mobile-submenu">
+        <Link
+          to="/o-apitere"
+          className="mobile-submenu-item"
+          onClick={() => setShowMobileMenu(false)}
+        >
+          O Apitere
+        </Link>
+
+        <Link
+          to="/nas-tim"
+          className="mobile-submenu-item"
+          onClick={() => setShowMobileMenu(false)}
+        >
+          Náš tím
+        </Link>
+
+        <Link
+          to="/nase-vcelnice"
+          className="mobile-submenu-item"
+          onClick={() => setShowMobileMenu(false)}
+        >
+          Naše včelnice
+        </Link>
+      </div>
+    )}
+
+    <button
+      type="button"
+      className="mobile-menu-dropdown-button"
+      onClick={() => setShowMobileActivities(!showMobileActivities)}
+    >
+      <span>Aktivity</span>
+      <span>{showMobileActivities ? "−" : "+"}</span>
+    </button>
+
+    {showMobileActivities && (
+      <div className="mobile-submenu">
+        <Link
+          to="/vzdelavanie"
+          className="mobile-submenu-item"
+          onClick={() => setShowMobileMenu(false)}
+        >
+          Vzdelávanie
+        </Link>
+
+        <Link
+          to="/veda-a-vyskum"
+          className="mobile-submenu-item"
+          onClick={() => setShowMobileMenu(false)}
+        >
+          Veda a výskum
+        </Link>
+      </div>
+    )}
+
+    <Link
+      to="/granty"
+      className="mobile-menu-item"
+      onClick={() => setShowMobileMenu(false)}
+    >
+      Granty
+    </Link>
+
+    <a
+      href="/#podpora"
+      className="mobile-menu-item"
+      onClick={(e) => {
+        goToSection("podpora")(e);
+        setShowMobileMenu(false);
+      }}
+    >
+      Podporte nás
+    </a>
+
+    <a
+      href="/#kontakt"
+      className="mobile-menu-contact"
+      onClick={(e) => {
+        goToSection("kontakt")(e);
+        setShowMobileMenu(false);
+      }}
+    >
+      Kontakt
+    </a>
+
+  </div>
+)}
+
         </div>
       </header>
 
@@ -917,6 +1044,7 @@ function PodporaSection() {
   return (
     <section
       id="podpora"
+      className="podpora-section"
       style={{
         padding: "80px 24px",
         background: "#2f2416",
@@ -974,7 +1102,10 @@ function PodporaSection() {
 
 function KontaktSection() {
   return (
-    <section id="kontakt" style={{ ...sectionStyle, scrollMarginTop: "170px" }}>
+    <section 
+      id="kontakt"
+      className="kontakt-section"
+      style={{ ...sectionStyle, scrollMarginTop: "170px" }}>
       <div
         style={{
           maxWidth: "1100px",

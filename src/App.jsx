@@ -14,7 +14,7 @@ function HomePage() {
 
 function OnasPage() {
   return (
-    <div style={pageWrapStyle}>
+      <div className="page-mobile-wrap" style={pageWrapStyle}>
       <h1 style={pageTitleStyle}>O nás</h1>
       <p style={paragraphStyle}>
         OZ Apitera je občianske združenie zamerané na podporu verejnoprospešných
@@ -96,7 +96,7 @@ function NaseVcelnicePage() {
 
 function VzdelavaniePage() {
   return (
-    <div style={pageWrapStyle}>
+    <div className="page-mobile-wrap" style={pageWrapStyle}>
       <h1 style={pageTitleStyle}>Vzdelávanie</h1>
 
       <p style={paragraphStyle}>
@@ -140,6 +140,7 @@ function VzdelavaniePage() {
         </p>
 
         <div
+          className="education-grid"
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
@@ -216,6 +217,7 @@ function VedaVyskumPage() {
       </p>
 
       <div
+        className="article-card"
         style={{
           marginTop: "40px",
           background: "linear-gradient(to bottom right, #fffdf7, #fff6e5)",
@@ -287,6 +289,7 @@ function VedaVyskumPage() {
         </p>
 
         <div
+          className="article-actions"
           style={{
             display: "flex",
             gap: "14px",
@@ -1118,6 +1121,7 @@ function KontaktSection() {
       className="kontakt-section"
       style={{ ...sectionStyle, scrollMarginTop: "170px" }}>
       <div
+        className="contact-grid"
         style={{
           maxWidth: "1100px",
           margin: "0 auto",
@@ -1140,6 +1144,7 @@ function KontaktSection() {
         </div>
 
         <div
+          className="contact-form-box"
           style={{
             background: "#fff8ea",
             border: "1px solid #f0dfb4",

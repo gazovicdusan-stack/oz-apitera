@@ -1,5 +1,16 @@
 import { useState } from "react";
-import { Routes, Route, Link, useNavigate, useLocation } from "react-router";
+import {
+  Routes,
+  Route,
+  Link,
+  useNavigate,
+  useLocation,
+} from "react-router";
+
+
+/* =========================================================
+   DOMOVSKÁ STRÁNKA
+   ========================================================= */
 
 function HomePage() {
   return (
@@ -12,14 +23,22 @@ function HomePage() {
   );
 }
 
+
+/* =========================================================
+   O NÁS
+   ========================================================= */
+
 function OnasPage() {
   return (
-      <div className="page-mobile-wrap" style={pageWrapStyle}>
+    <div className="page-mobile-wrap" style={pageWrapStyle}>
       <h1 style={pageTitleStyle}>O nás</h1>
+
       <p style={paragraphStyle}>
-        OZ Apitera je občianske združenie zamerané na podporu verejnoprospešných
-        aktivít, rozvoj komunity a vytváranie projektov, ktoré majú pozitívny dopad.
+        OZ Apitera je občianske združenie zamerané na podporu
+        verejnoprospešných aktivít, rozvoj komunity a vytváranie projektov,
+        ktoré majú pozitívny dopad.
       </p>
+
       <p style={paragraphStyle}>
         Našou snahou je prepájať ľudí, nápady a iniciatívy, ktoré pomáhajú
         zlepšovať život v komunite a podporovať spoluprácu medzi jednotlivcami,
@@ -29,31 +48,17 @@ function OnasPage() {
   );
 }
 
-function GrantyPage() {
-  return (
-    <div style={pageWrapStyle}>
-      <h1 style={pageTitleStyle}>Granty</h1>
-      <p style={paragraphStyle}>
-        V tejto sekcii budú zverejnené informácie o grantových výzvach,
-        podporených projektoch, možnostiach financovania a aktivitách,
-        ktoré OZ Apitera realizuje s pomocou grantov a partnerov.
-      </p>
-      <p style={paragraphStyle}>
-        Nájdete tu aj prehľad pripravovaných grantových iniciatív,
-        zapojených partnerov a priebežné informácie o realizovaných projektoch.
-      </p>
-    </div>
-  );
-}
 
 function OApiterePage() {
   return (
-    <div style={pageWrapStyle}>
+    <div className="page-mobile-wrap" style={pageWrapStyle}>
       <h1 style={pageTitleStyle}>O Apitere</h1>
+
       <p style={paragraphStyle}>
         OZ Apitera je občianske združenie zamerané na podporu včelárstva,
         komunitných aktivít, vzdelávania a environmentálnej osvety.
       </p>
+
       <p style={paragraphStyle}>
         Naším cieľom je prepájať ľudí, ktorí majú vzťah k prírode, tradíciám
         a udržateľnému rozvoju, a vytvárať projekty s pozitívnym dopadom.
@@ -62,14 +67,18 @@ function OApiterePage() {
   );
 }
 
+
 function NasTimPage() {
   return (
-    <div style={pageWrapStyle}>
+    <div className="page-mobile-wrap" style={pageWrapStyle}>
       <h1 style={pageTitleStyle}>Náš tím</h1>
+
       <p style={paragraphStyle}>
         V tejto sekcii môžete predstaviť členov občianskeho združenia,
-        dobrovoľníkov, spolupracovníkov a ľudí, ktorí sa podieľajú na aktivitách OZ Apitera.
+        dobrovoľníkov, spolupracovníkov a ľudí, ktorí sa podieľajú na aktivitách
+        OZ Apitera.
       </p>
+
       <p style={paragraphStyle}>
         Doplniť sa sem môžu mená, fotografie, funkcie, krátke medailóny
         a oblasť, ktorej sa jednotliví členovia venujú.
@@ -78,14 +87,17 @@ function NasTimPage() {
   );
 }
 
+
 function NaseVcelnicePage() {
   return (
-    <div style={pageWrapStyle}>
+    <div className="page-mobile-wrap" style={pageWrapStyle}>
       <h1 style={pageTitleStyle}>Naše včelnice</h1>
+
       <p style={paragraphStyle}>
         Táto stránka môže slúžiť na predstavenie vašich včelníc, ich polohy,
         zamerania, fotografie a zaujímavosti o chove včiel.
       </p>
+
       <p style={paragraphStyle}>
         Môžete sem doplniť aj informácie o počte úľov, miestach pôsobenia,
         starostlivosti o včely a aktivitách spojených s včelnicami.
@@ -93,6 +105,35 @@ function NaseVcelnicePage() {
     </div>
   );
 }
+
+
+/* =========================================================
+   GRANTY
+   ========================================================= */
+
+function GrantyPage() {
+  return (
+    <div className="page-mobile-wrap" style={pageWrapStyle}>
+      <h1 style={pageTitleStyle}>Granty</h1>
+
+      <p style={paragraphStyle}>
+        V tejto sekcii budú zverejnené informácie o grantových výzvach,
+        podporených projektoch, možnostiach financovania a aktivitách,
+        ktoré OZ Apitera realizuje s pomocou grantov a partnerov.
+      </p>
+
+      <p style={paragraphStyle}>
+        Nájdete tu aj prehľad pripravovaných grantových iniciatív,
+        zapojených partnerov a priebežné informácie o realizovaných projektoch.
+      </p>
+    </div>
+  );
+}
+
+
+/* =========================================================
+   VZDELÁVANIE
+   ========================================================= */
 
 function VzdelavaniePage() {
   return (
@@ -147,11 +188,21 @@ function VzdelavaniePage() {
             gap: "20px",
           }}
         >
-          <Link to="/univerzita-ludskosti-v-zavare" style={educationCardStyle}>
-            <div style={educationLabelStyle}>Vzdelávací projekt</div>
-            <h3 style={educationTitleStyle}>Univerzita ľudskosti v Zavare</h3>
+          <Link
+            to="/univerzita-ludskosti-v-zavare"
+            style={educationCardStyle}
+          >
+            <div style={educationLabelStyle}>
+              Vzdelávací projekt
+            </div>
+
+            <h3 style={educationTitleStyle}>
+              Univerzita ľudskosti v Zavare
+            </h3>
+
             <p style={educationTextStyle}>
-              Viac informácií o aktivitách, programe a priebehu vzdelávania v Zavare.
+              Viac informácií o aktivitách, programe a priebehu vzdelávania
+              v Zavare.
             </p>
           </Link>
 
@@ -159,12 +210,17 @@ function VzdelavaniePage() {
             to="/vcelarske-vzdelavanie-pre-najmensich-v-bratislave"
             style={educationCardStyle}
           >
-            <div style={educationLabelStyle}>Vzdelávací projekt</div>
+            <div style={educationLabelStyle}>
+              Vzdelávací projekt
+            </div>
+
             <h3 style={educationTitleStyle}>
               Včelárske vzdelávanie pre najmenších v Bratislave
             </h3>
+
             <p style={educationTextStyle}>
-              Predstavenie projektu zameraného na najmenšie deti a ich vzťah k včelám a prírode.
+              Predstavenie projektu zameraného na najmenšie deti a ich vzťah
+              k včelám a prírode.
             </p>
           </Link>
         </div>
@@ -173,58 +229,82 @@ function VzdelavaniePage() {
   );
 }
 
+
 function UniverzitaLudskostiPage() {
   return (
-    <div style={pageWrapStyle}>
-      <h1 style={pageTitleStyle}>Univerzita ľudskosti v Zavare</h1>
+    <div className="page-mobile-wrap" style={pageWrapStyle}>
+      <h1 style={pageTitleStyle}>
+        Univerzita ľudskosti v Zavare
+      </h1>
+
       <p style={paragraphStyle}>
-        Táto stránka môže slúžiť na predstavenie projektu Univerzita ľudskosti v Zavare,
-        jeho cieľov, programu, partnerov a priebehu realizácie.
+        Táto stránka môže slúžiť na predstavenie projektu Univerzita ľudskosti
+        v Zavare, jeho cieľov, programu, partnerov a priebehu realizácie.
       </p>
+
       <p style={paragraphStyle}>
-        Môžete sem doplniť fotografie, harmonogram, výstupy projektu a ďalšie
-        informácie o vzdelávacích aktivitách.
+        Môžete sem doplniť fotografie, harmonogram, výstupy projektu
+        a ďalšie informácie o vzdelávacích aktivitách.
       </p>
     </div>
   );
 }
+
 
 function VzdelavanieNajmensichPage() {
   return (
-    <div style={pageWrapStyle}>
-      <h1 style={pageTitleStyle}>Včelárske vzdelávanie pre najmenších v Bratislave</h1>
+    <div className="page-mobile-wrap" style={pageWrapStyle}>
+      <h1 style={pageTitleStyle}>
+        Včelárske vzdelávanie pre najmenších v Bratislave
+      </h1>
+
       <p style={paragraphStyle}>
         Táto stránka môže predstaviť vzdelávacie aktivity určené pre deti,
-        ktoré sú zamerané na spoznávanie sveta včiel, prírody a základov včelárstva.
+        ktoré sú zamerané na spoznávanie sveta včiel, prírody a základov
+        včelárstva.
       </p>
+
       <p style={paragraphStyle}>
         Môžete sem doplniť priebeh projektu, cieľové skupiny, fotografie,
-        spolupracujúce organizácie a konkrétne aktivity realizované v Bratislave.
+        spolupracujúce organizácie a konkrétne aktivity realizované
+        v Bratislave.
       </p>
     </div>
   );
 }
 
+
+/* =========================================================
+   VEDA A VÝSKUM
+   ========================================================= */
+
 function VedaVyskumPage() {
   return (
-    <div style={pageWrapStyle}>
-      <h1 style={pageTitleStyle}>Veda a výskum</h1>
+    <div
+      className="page-mobile-wrap"
+      style={pageWrapStyle}
+    >
+      <h1 style={pageTitleStyle}>
+        Veda a výskum
+      </h1>
 
       <p style={paragraphStyle}>
         V tejto sekcii nájdete odborné výstupy, vedecké články a výskumné témy,
-        ktoré súvisia s apiterapiou, včelárstvom, zdravím, prírodou a
-        rekreačným cestovným ruchom.
+        ktoré súvisia s apiterapiou, včelárstvom, zdravím, prírodou
+        a rekreačným cestovným ruchom.
       </p>
 
       <div
         className="article-card"
         style={{
           marginTop: "40px",
-          background: "linear-gradient(to bottom right, #fffdf7, #fff6e5)",
+          background:
+            "linear-gradient(to bottom right, #fffdf7, #fff6e5)",
           border: "1px solid #ead7ac",
           borderRadius: "26px",
           padding: "34px",
-          boxShadow: "0 14px 34px rgba(138, 99, 20, 0.10)",
+          boxShadow:
+            "0 14px 34px rgba(138, 99, 20, 0.10)",
         }}
       >
         <div
@@ -280,12 +360,12 @@ function VedaVyskumPage() {
           turizmu, pričom analyzuje skúsenosti 122 respondentov z rôznych
           regiónov Slovenska, ktorí absolvovali terapiu v apidomčekoch.
           Výsledky poukazujú na štatisticky významné zlepšenie psychickej aj
-          fyzickej pohody, ako aj zvýšenie pocitu relaxácie a komfortu počas a
-          po terapii. Zistenia zároveň naznačujú vysokú mieru akceptácie
-          apiterapie naprieč rôznymi skupinami návštevníkov a jej potenciál ako
-          súčasti udržateľného turizmu a regionálneho rozvoja. Štúdia poukazuje
-          na potrebu ďalšieho výskumu a zvyšovania povedomia o možnostiach
-          využitia apiterapie v oblasti cestovného ruchu.
+          fyzickej pohody, ako aj zvýšenie pocitu relaxácie a komfortu počas
+          a po terapii. Zistenia zároveň naznačujú vysokú mieru akceptácie
+          apiterapie naprieč rôznymi skupinami návštevníkov a jej potenciál
+          ako súčasti udržateľného turizmu a regionálneho rozvoja. Štúdia
+          poukazuje na potrebu ďalšieho výskumu a zvyšovania povedomia
+          o možnostiach využitia apiterapie v oblasti cestovného ruchu.
         </p>
 
         <div
@@ -309,7 +389,8 @@ function VedaVyskumPage() {
               fontWeight: "bold",
               padding: "14px 22px",
               borderRadius: "14px",
-              boxShadow: "0 6px 16px rgba(194,124,0,0.25)",
+              boxShadow:
+                "0 6px 16px rgba(194,124,0,0.25)",
             }}
           >
             Otvoriť článok
@@ -361,10 +442,19 @@ function VedaVyskumPage() {
               color: "#444",
             }}
           >
-            Maruniaková, A., Kvasničák, R., Iľko, I., &amp; Peterková, V. (2025).
-            <em> APITHERAPY AS AN INNOVATIVE ELEMENT IN RECREATIONAL TOURISM DEVELOPMENT</em>.
-            In <em>Public recreation and landscape protection - with respect hand in hand…</em>.
-            DOI: 10.11118/978-80-7701-025-2-0034
+            Maruniaková, A., Kvasničák, R., Iľko, I., &amp; Peterková, V.
+            (2025).
+            <em>
+              {" "}
+              APITHERAPY AS AN INNOVATIVE ELEMENT IN RECREATIONAL TOURISM
+              DEVELOPMENT
+            </em>
+            . In{" "}
+            <em>
+              Public recreation and landscape protection - with respect hand
+              in hand…
+            </em>
+            . DOI: 10.11118/978-80-7701-025-2-0034
           </p>
         </div>
       </div>
@@ -372,68 +462,118 @@ function VedaVyskumPage() {
   );
 }
 
+
+/* =========================================================
+   HLAVNÝ KOMPONENT
+   ========================================================= */
+
 export default function OZApiteraWebsite() {
   const navigate = useNavigate();
   const location = useLocation();
-  const [showAboutMenu, setShowAboutMenu] = useState(false);
-  const [showActivitiesMenu, setShowActivitiesMenu] = useState(false);
 
-  const [showMobileMenu, setShowMobileMenu] = useState(false);
-  const [showMobileAbout, setShowMobileAbout] = useState(false);
-  const [showMobileActivities, setShowMobileActivities] = useState(false);
+  const [showAboutMenu, setShowAboutMenu] =
+    useState(false);
+
+  const [showActivitiesMenu, setShowActivitiesMenu] =
+    useState(false);
+
+  const [showMobileMenu, setShowMobileMenu] =
+    useState(false);
+
+  const [showMobileAbout, setShowMobileAbout] =
+    useState(false);
+
+  const [showMobileActivities, setShowMobileActivities] =
+    useState(false);
+
+
+  /* Zavretie celého mobilného menu */
 
   const closeMobileMenu = () => {
     setShowMobileMenu(false);
     setShowMobileAbout(false);
     setShowMobileActivities(false);
+  };
+
+
+  /* Domov */
 
   const goHome = (e) => {
     e.preventDefault();
 
     if (location.pathname !== "/") {
       navigate("/");
+
       setTimeout(() => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
       }, 80);
     } else {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
     }
   };
+
+
+  /* Presun na sekciu */
 
   const goToSection = (sectionId) => (e) => {
     e.preventDefault();
 
     if (location.pathname !== "/") {
       navigate("/");
+
       setTimeout(() => {
-        const el = document.getElementById(sectionId);
+        const el =
+          document.getElementById(sectionId);
+
         if (el) {
-          el.scrollIntoView({ behavior: "smooth", block: "start" });
+          el.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
         }
       }, 150);
     } else {
-      const el = document.getElementById(sectionId);
+      const el =
+        document.getElementById(sectionId);
+
       if (el) {
-        el.scrollIntoView({ behavior: "smooth", block: "start" });
+        el.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
       }
     }
   };
+
 
   return (
     <div
       style={{
         fontFamily: "Arial, sans-serif",
-        background: "linear-gradient(to bottom, #fffdf7, #ffffff)",
+        background:
+          "linear-gradient(to bottom, #fffdf7, #ffffff)",
         color: "#222",
         minHeight: "100vh",
       }}
     >
+
+      {/* =====================================================
+          HEADER
+          ===================================================== */}
+
       <header
         className="main-header"
-         style={{
+        style={{
           position: "sticky",
           top: 0,
-          background: "rgba(255,255,255,0.95)",
+          background:
+            "rgba(255,255,255,0.95)",
           borderBottom: "1px solid #eee",
           backdropFilter: "blur(8px)",
           zIndex: 10,
@@ -452,10 +592,17 @@ export default function OZApiteraWebsite() {
             gap: "20px",
           }}
         >
-          <div 
-          className="brand-area"
-          style={{ display: "flex", alignItems: "center", gap: "14px" }}>
 
+          {/* LOGO */}
+
+          <div
+            className="brand-area"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "14px",
+            }}
+          >
             <img
               className="header-logo"
               src="/logo.jpg"
@@ -465,33 +612,58 @@ export default function OZApiteraWebsite() {
                 height: "120px",
                 objectFit: "cover",
                 borderRadius: "50%",
-                border: "2px solid #f0dfb4",
+                border:
+                  "2px solid #f0dfb4",
               }}
             />
+
             <div>
-              <div style={{ fontSize: "28px", fontWeight: "bold", color: "#c27c00" }}>
+              <div
+                style={{
+                  fontSize: "28px",
+                  fontWeight: "bold",
+                  color: "#c27c00",
+                }}
+              >
                 OZ Apitera
               </div>
-              <div style={{ fontSize: "14px", color: "#666" }}>
-                Občianske združenie pre komunitu, pomoc a rozvoj
+
+              <div
+                style={{
+                  fontSize: "14px",
+                  color: "#666",
+                }}
+              >
+                Občianske združenie pre komunitu,
+                pomoc a rozvoj
               </div>
             </div>
           </div>
 
-            <button
-             type="button"
-             className="mobile-menu-button"
-             onClick={() => {
+
+          {/* HAMBURGER */}
+
+          <button
+            type="button"
+            className="mobile-menu-button"
+            onClick={() => {
               if (showMobileMenu) {
                 closeMobileMenu();
               } else {
                 setShowMobileMenu(true);
               }
             }}
-            aria-label={showMobileMenu ? "Zatvoriť menu" : "Otvoriť menu"}
-            >
-              {showMobileMenu ? "✕" : "☰"}
-              </button>
+            aria-label={
+              showMobileMenu
+                ? "Zatvoriť menu"
+                : "Otvoriť menu"
+            }
+          >
+            {showMobileMenu ? "✕" : "☰"}
+          </button>
+
+
+          {/* DESKTOP MENU */}
 
           <nav
             className="main-nav"
@@ -503,254 +675,487 @@ export default function OZApiteraWebsite() {
               marginLeft: "auto",
               width: "fit-content",
               minWidth: "620px",
-              justifyContent: "space-between",
-              background: "rgba(255,255,255,0.95)",
+              justifyContent:
+                "space-between",
+              background:
+                "rgba(255,255,255,0.95)",
               padding: "10px 12px",
               borderRadius: "18px",
-              border: "1px solid #ead7ac",
-              boxShadow: "0 10px 28px rgba(138, 99, 20, 0.14)",
+              border:
+                "1px solid #ead7ac",
+              boxShadow:
+                "0 10px 28px rgba(138, 99, 20, 0.14)",
             }}
           >
-            <a href="/" onClick={goHome} style={navItemStyle}>Domov</a>
+
+            <a
+              href="/"
+              onClick={goHome}
+              style={navItemStyle}
+            >
+              Domov
+            </a>
+
+
+            {/* O NÁS */}
 
             <div
-              style={{ position: "relative", display: "flex", alignItems: "center" }}
-              onMouseEnter={() => setShowAboutMenu(true)}
-              onMouseLeave={() => setShowAboutMenu(false)}
+              style={{
+                position: "relative",
+                display: "flex",
+                alignItems: "center",
+              }}
+              onMouseEnter={() =>
+                setShowAboutMenu(true)
+              }
+              onMouseLeave={() =>
+                setShowAboutMenu(false)
+              }
             >
-              <button type="button" style={navDropdownTriggerStyle}>
+              <button
+                type="button"
+                style={navDropdownTriggerStyle}
+              >
                 O nás
               </button>
 
               {showAboutMenu && (
-                <div style={goldDropdownMenuStyle}>
-                  <Link to="/o-apitere" style={goldDropdownItemStyle}>O Apitere</Link>
-                  <Link to="/nas-tim" style={goldDropdownItemStyle}>Náš tím</Link>
-                  <Link to="/nase-vcelnice" style={goldDropdownItemStyle}>Naše včelnice</Link>
+                <div
+                  style={
+                    goldDropdownMenuStyle
+                  }
+                >
+                  <Link
+                    to="/o-apitere"
+                    style={
+                      goldDropdownItemStyle
+                    }
+                  >
+                    O Apitere
+                  </Link>
+
+                  <Link
+                    to="/nas-tim"
+                    style={
+                      goldDropdownItemStyle
+                    }
+                  >
+                    Náš tím
+                  </Link>
+
+                  <Link
+                    to="/nase-vcelnice"
+                    style={
+                      goldDropdownItemStyle
+                    }
+                  >
+                    Naše včelnice
+                  </Link>
                 </div>
               )}
             </div>
 
+
+            {/* AKTIVITY */}
+
             <div
-              style={{ position: "relative", display: "flex", alignItems: "center" }}
-              onMouseEnter={() => setShowActivitiesMenu(true)}
-              onMouseLeave={() => setShowActivitiesMenu(false)}
+              style={{
+                position: "relative",
+                display: "flex",
+                alignItems: "center",
+              }}
+              onMouseEnter={() =>
+                setShowActivitiesMenu(true)
+              }
+              onMouseLeave={() =>
+                setShowActivitiesMenu(false)
+              }
             >
-              <button type="button" style={navDropdownTriggerStyle}>
+              <button
+                type="button"
+                style={navDropdownTriggerStyle}
+              >
                 Aktivity
               </button>
 
               {showActivitiesMenu && (
-                <div style={goldDropdownMenuStyle}>
-                  <Link to="/vzdelavanie" style={goldDropdownItemStyle}>Vzdelávanie</Link>
-                  <Link to="/veda-a-vyskum" style={goldDropdownItemStyle}>Veda a výskum</Link>
+                <div
+                  style={
+                    goldDropdownMenuStyle
+                  }
+                >
+                  <Link
+                    to="/vzdelavanie"
+                    style={
+                      goldDropdownItemStyle
+                    }
+                  >
+                    Vzdelávanie
+                  </Link>
+
+                  <Link
+                    to="/veda-a-vyskum"
+                    style={
+                      goldDropdownItemStyle
+                    }
+                  >
+                    Veda a výskum
+                  </Link>
                 </div>
               )}
             </div>
 
-            <Link to="/granty" style={navItemStyle}>Granty</Link>
-            <a href="/#podpora" onClick={goToSection("podpora")} style={navItemStyle}>
+
+            <Link
+              to="/granty"
+              style={navItemStyle}
+            >
+              Granty
+            </Link>
+
+            <a
+              href="/#podpora"
+              onClick={
+                goToSection("podpora")
+              }
+              style={navItemStyle}
+            >
               Podporte nás
             </a>
-            <a href="/#kontakt" onClick={goToSection("kontakt")} style={navButtonStyle}>
+
+            <a
+              href="/#kontakt"
+              onClick={
+                goToSection("kontakt")
+              }
+              style={navButtonStyle}
+            >
               Kontakt
             </a>
+
           </nav>
 
-{showMobileMenu && (
-  <div className="mobile-menu">
 
-    <a
-      href="/"
-      onClick={(e) => {
-        goHome(e);
-        closeMobileMenu();
-      }}
-      className="mobile-menu-item"
-    >
-      Domov
-    </a>
+          {/* =================================================
+              MOBILNÉ MENU
+              ================================================= */}
 
-    <button
-      type="button"
-      className="mobile-menu-dropdown-button"
-      onClick={() => setShowMobileAbout(!showMobileAbout)}
-    >
-      <span>O nás</span>
-      <span>{showMobileAbout ? "−" : "+"}</span>
-    </button>
+          {showMobileMenu && (
+            <div className="mobile-menu">
 
-    {showMobileAbout && (
-      <div className="mobile-submenu">
-        <Link
-          to="/o-apitere"
-          className="mobile-submenu-item"
-          onClick={closeMobileMenu}
-        >
-          O Apitere
-        </Link>
+              <a
+                href="/"
+                className="mobile-menu-item"
+                onClick={(e) => {
+                  goHome(e);
+                  closeMobileMenu();
+                }}
+              >
+                Domov
+              </a>
 
-        <Link
-          to="/nas-tim"
-          className="mobile-submenu-item"
-          onClick={closeMobileMenu}
-        >
-          Náš tím
-        </Link>
 
-        <Link
-          to="/nase-vcelnice"
-          className="mobile-submenu-item"
-          onClick={closeMobileMenu}
-        >
-          Naše včelnice
-        </Link>
-      </div>
-    )}
+              {/* O NÁS */}
 
-    <button
-      type="button"
-      className="mobile-menu-dropdown-button"
-      onClick={() => setShowMobileActivities(!showMobileActivities)}
-    >
-      <span>Aktivity</span>
-      <span>{showMobileActivities ? "−" : "+"}</span>
-    </button>
+              <button
+                type="button"
+                className="mobile-menu-dropdown-button"
+                onClick={() =>
+                  setShowMobileAbout(
+                    !showMobileAbout
+                  )
+                }
+              >
+                <span>O nás</span>
 
-    {showMobileActivities && (
-      <div className="mobile-submenu">
-        <Link
-          to="/vzdelavanie"
-          className="mobile-submenu-item"
-          onClick={closeMobileMenu}
-        >
-          Vzdelávanie
-        </Link>
+                <span>
+                  {showMobileAbout
+                    ? "−"
+                    : "+"}
+                </span>
+              </button>
 
-        <Link
-          to="/veda-a-vyskum"
-          className="mobile-submenu-item"
-          onClick={closeMobileMenu}
-        >
-          Veda a výskum
-        </Link>
-      </div>
-    )}
+              {showMobileAbout && (
+                <div className="mobile-submenu">
 
-    <Link
-      to="/granty"
-      className="mobile-menu-item"
-      onClick={closeMobileMenu}
-    >
-      Granty
-    </Link>
+                  <Link
+                    to="/o-apitere"
+                    className="mobile-submenu-item"
+                    onClick={
+                      closeMobileMenu
+                    }
+                  >
+                    O Apitere
+                  </Link>
 
-    <a
-      href="/#podpora"
-      className="mobile-menu-item"
-      onClick={(e) => {
-        goToSection("podpora")(e);
-        closeMobileMenu();
-      }}
-    >
-      Podporte nás
-    </a>
+                  <Link
+                    to="/nas-tim"
+                    className="mobile-submenu-item"
+                    onClick={
+                      closeMobileMenu
+                    }
+                  >
+                    Náš tím
+                  </Link>
 
-    <a
-      href="/#kontakt"
-      className="mobile-menu-contact"
-      onClick={(e) => {
-        goToSection("kontakt")(e);
-        closeMobileMenu();
-      }}
-    >
-      Kontakt
-    </a>
+                  <Link
+                    to="/nase-vcelnice"
+                    className="mobile-submenu-item"
+                    onClick={
+                      closeMobileMenu
+                    }
+                  >
+                    Naše včelnice
+                  </Link>
 
-  </div>
-)}
+                </div>
+              )}
+
+
+              {/* AKTIVITY */}
+
+              <button
+                type="button"
+                className="mobile-menu-dropdown-button"
+                onClick={() =>
+                  setShowMobileActivities(
+                    !showMobileActivities
+                  )
+                }
+              >
+                <span>
+                  Aktivity
+                </span>
+
+                <span>
+                  {showMobileActivities
+                    ? "−"
+                    : "+"}
+                </span>
+              </button>
+
+              {showMobileActivities && (
+                <div className="mobile-submenu">
+
+                  <Link
+                    to="/vzdelavanie"
+                    className="mobile-submenu-item"
+                    onClick={
+                      closeMobileMenu
+                    }
+                  >
+                    Vzdelávanie
+                  </Link>
+
+                  <Link
+                    to="/veda-a-vyskum"
+                    className="mobile-submenu-item"
+                    onClick={
+                      closeMobileMenu
+                    }
+                  >
+                    Veda a výskum
+                  </Link>
+
+                </div>
+              )}
+
+
+              <Link
+                to="/granty"
+                className="mobile-menu-item"
+                onClick={
+                  closeMobileMenu
+                }
+              >
+                Granty
+              </Link>
+
+
+              <a
+                href="/#podpora"
+                className="mobile-menu-item"
+                onClick={(e) => {
+                  goToSection(
+                    "podpora"
+                  )(e);
+
+                  closeMobileMenu();
+                }}
+              >
+                Podporte nás
+              </a>
+
+
+              <a
+                href="/#kontakt"
+                className="mobile-menu-contact"
+                onClick={(e) => {
+                  goToSection(
+                    "kontakt"
+                  )(e);
+
+                  closeMobileMenu();
+                }}
+              >
+                Kontakt
+              </a>
+
+            </div>
+          )}
 
         </div>
       </header>
 
+
+      {/* =====================================================
+          ROUTES
+          ===================================================== */}
+
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/o-nas" element={<OnasPage />} />
-        <Route path="/o-apitere" element={<OApiterePage />} />
-        <Route path="/nas-tim" element={<NasTimPage />} />
-        <Route path="/nase-vcelnice" element={<NaseVcelnicePage />} />
-        <Route path="/vzdelavanie" element={<VzdelavaniePage />} />
-        <Route path="/veda-a-vyskum" element={<VedaVyskumPage />} />
-        <Route path="/granty" element={<GrantyPage />} />
-        <Route path="/univerzita-ludskosti-v-zavare" element={<UniverzitaLudskostiPage />} />
+
+        <Route
+          path="/"
+          element={<HomePage />}
+        />
+
+        <Route
+          path="/o-nas"
+          element={<OnasPage />}
+        />
+
+        <Route
+          path="/o-apitere"
+          element={<OApiterePage />}
+        />
+
+        <Route
+          path="/nas-tim"
+          element={<NasTimPage />}
+        />
+
+        <Route
+          path="/nase-vcelnice"
+          element={<NaseVcelnicePage />}
+        />
+
+        <Route
+          path="/vzdelavanie"
+          element={<VzdelavaniePage />}
+        />
+
+        <Route
+          path="/veda-a-vyskum"
+          element={<VedaVyskumPage />}
+        />
+
+        <Route
+          path="/granty"
+          element={<GrantyPage />}
+        />
+
+        <Route
+          path="/univerzita-ludskosti-v-zavare"
+          element={
+            <UniverzitaLudskostiPage />
+          }
+        />
+
         <Route
           path="/vcelarske-vzdelavanie-pre-najmensich-v-bratislave"
-          element={<VzdelavanieNajmensichPage />}
+          element={
+            <VzdelavanieNajmensichPage />
+          }
         />
+
       </Routes>
 
-    <footer
-  style={{
-    borderTop: "1px solid #eee",
-    padding: "24px",
-    textAlign: "center",
-    color: "#777",
-    background: "#fffdf9",
-  }}
->
-  <div
-    style={{
-      display: "flex",
-      justifyContent: "center",
-      gap: "16px",
-      marginBottom: "14px",
-    }}
-  >
-    <a
-      href="https://www.facebook.com/profile.php?id=61583201130492"
-      target="_blank"
-      rel="noreferrer"
-      style={socialIconLinkStyle}
-      aria-label="Facebook"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="22"
-        height="22"
-        viewBox="0 0 24 24"
-        fill="currentColor"
-      >
-        <path d="M22 12.07C22 6.49 17.52 2 12 2S2 6.49 2 12.07C2 17.11 5.66 21.29 10.44 22v-7.06H7.9v-2.87h2.54V9.41c0-2.52 1.49-3.91 3.78-3.91 1.1 0 2.25.2 2.25.2v2.48h-1.27c-1.25 0-1.64.78-1.64 1.58v1.89h2.79l-.45 2.87h-2.34V22C18.34 21.29 22 17.11 22 12.07z" />
-      </svg>
-    </a>
 
-    <a
-      href="https://www.instagram.com/apitera.oz/"
-      target="_blank"
-      rel="noreferrer"
-      style={socialIconLinkStyle}
-      aria-label="Instagram"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="22"
-        height="22"
-        viewBox="0 0 24 24"
-        fill="currentColor"
-      >
-        <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.8A3.95 3.95 0 0 0 3.8 7.75v8.5a3.95 3.95 0 0 0 3.95 3.95h8.5a3.95 3.95 0 0 0 3.95-3.95v-8.5a3.95 3.95 0 0 0-3.95-3.95h-8.5zm8.95 1.35a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2zM12 6.86A5.14 5.14 0 1 1 6.86 12 5.14 5.14 0 0 1 12 6.86zm0 1.8A3.34 3.34 0 1 0 15.34 12 3.34 3.34 0 0 0 12 8.66z" />
-      </svg>
-    </a>
-  </div>
+      {/* =====================================================
+          FOOTER
+          ===================================================== */}
 
-  <div>© 2025 OZ Apitera. Všetky práva vyhradené.</div>
-</footer>
+      <footer
+        style={{
+          borderTop: "1px solid #eee",
+          padding: "24px",
+          textAlign: "center",
+          color: "#777",
+          background: "#fffdf9",
+        }}
+      >
+
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            gap: "16px",
+            marginBottom: "14px",
+          }}
+        >
+
+          {/* FACEBOOK */}
+
+          <a
+            href="https://www.facebook.com/profile.php?id=61583201130492"
+            target="_blank"
+            rel="noreferrer"
+            style={socialIconLinkStyle}
+            aria-label="Facebook"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path d="M22 12.07C22 6.49 17.52 2 12 2S2 6.49 2 12.07C2 17.11 5.66 21.29 10.44 22v-7.06H7.9v-2.87h2.54V9.41c0-2.52 1.49-3.91 3.78-3.91 1.1 0 2.25.2 2.25.2v2.48h-1.27c-1.25 0-1.64.78-1.64 1.58v1.89h2.79l-.45 2.87h-2.34V22C18.34 21.29 22 17.11 22 12.07z" />
+            </svg>
+          </a>
+
+
+          {/* INSTAGRAM */}
+
+          <a
+            href="https://www.instagram.com/apitera.oz/"
+            target="_blank"
+            rel="noreferrer"
+            style={socialIconLinkStyle}
+            aria-label="Instagram"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.8A3.95 3.95 0 0 0 3.8 7.75v8.5a3.95 3.95 0 0 0 3.95 3.95h8.5a3.95 3.95 0 0 0 3.95-3.95v-8.5a3.95 3.95 0 0 0-3.95-3.95h-8.5zm8.95 1.35a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2zM12 6.86A5.14 5.14 0 1 1 6.86 12 5.14 5.14 0 0 1 12 6.86zm0 1.8A3.34 3.34 0 1 0 15.34 12 3.34 3.34 0 0 0 12 8.66z" />
+            </svg>
+          </a>
+
+        </div>
+
+        <div>
+          © {new Date().getFullYear()} OZ Apitera.
+          Všetky práva vyhradené.
+        </div>
+
+      </footer>
+
     </div>
   );
 }
 
+
+/* =========================================================
+   HERO SECTION
+   ========================================================= */
+
 function HeroSection() {
-  const [isFlipped, setIsFlipped] = useState(false);
+  const [isFlipped, setIsFlipped] =
+    useState(false);
 
   return (
     <section
@@ -760,12 +1165,17 @@ function HeroSection() {
         margin: "0 auto",
         padding: "80px 24px 60px",
         display: "grid",
-        gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+        gridTemplateColumns:
+          "repeat(auto-fit, minmax(300px, 1fr))",
         gap: "40px",
         alignItems: "center",
       }}
     >
+
+      {/* TEXT */}
+
       <div className="hero-text">
+
         <div
           style={{
             display: "inline-block",
@@ -781,6 +1191,7 @@ function HeroSection() {
           Spájame ľudí pre dobrú vec
         </div>
 
+
         <h1
           style={{
             fontSize: "56px",
@@ -792,6 +1203,7 @@ function HeroSection() {
           OZ Apitera
         </h1>
 
+
         <p
           style={{
             fontSize: "20px",
@@ -801,49 +1213,94 @@ function HeroSection() {
             maxWidth: "600px",
           }}
         >
-          Občianske združenie Apitera vzniklo z presvedčenia, že včely a včelárstvo
-          majú nezastupiteľný význam pre človeka, prírodu aj rovnováhu v krajine.
-          Zameriavame sa na podporu a rozvoj včelárstva, vzdelávanie a
-          environmentálnu osvetu.
+          Občianske združenie Apitera vzniklo z presvedčenia, že včely
+          a včelárstvo majú nezastupiteľný význam pre človeka, prírodu
+          aj rovnováhu v krajine. Zameriavame sa na podporu a rozvoj
+          včelárstva, vzdelávanie a environmentálnu osvetu.
         </p>
 
-        <div style={{ display: "flex", gap: "14px", flexWrap: "wrap" }}>
-          <Link to="/o-nas" style={primaryButton}>Zistiť viac</Link>
-          <a href="/#kontakt" style={secondaryButton}>Kontaktovať nás</a>
+
+        <div
+          style={{
+            display: "flex",
+            gap: "14px",
+            flexWrap: "wrap",
+          }}
+        >
+          <Link
+            to="/o-nas"
+            style={primaryButton}
+          >
+            Zistiť viac
+          </Link>
+
+          <a
+            href="/#kontakt"
+            style={secondaryButton}
+          >
+            Kontaktovať nás
+          </a>
         </div>
+
       </div>
 
+
+      {/* OTOČNÁ KARTA */}
+
       <div
-          style={{
-            background: "white",
-             borderRadius: "28px",
-             padding: "24px",
-             boxShadow: "0 12px 35px rgba(0,0,0,0.12)",
-             textAlign: "center",
-             perspective: "1000px",
-             cursor: "pointer",
-  }}
-  onMouseEnter={() => setIsFlipped(true)}
-  onMouseLeave={() => setIsFlipped(false)}
-  onClick={() => setIsFlipped((prev) => !prev)}
+        className="hero-card"
+        style={{
+          background: "white",
+          borderRadius: "28px",
+          padding: "24px",
+          boxShadow:
+            "0 12px 35px rgba(0,0,0,0.12)",
+          textAlign: "center",
+          perspective: "1000px",
+          cursor: "pointer",
+        }}
+        onMouseEnter={() =>
+          setIsFlipped(true)
+        }
+        onMouseLeave={() =>
+          setIsFlipped(false)
+        }
+        onClick={() =>
+          setIsFlipped(
+            (prev) => !prev
+          )
+        }
       >
+
+        {/* ROTUJÚCI BLOK */}
+
         <div
-          className="hero-card"
+          className="hero-flip-inner"
           style={{
             position: "relative",
             width: "100%",
             height: "500px",
-            transformStyle: "preserve-3d",
-            transition: "transform 0.7s",
-            transform: isFlipped ? "rotateY(180deg)" : "rotateY(0deg)",
+            transformStyle:
+              "preserve-3d",
+            transition:
+              "transform 0.7s",
+            transform: isFlipped
+              ? "rotateY(180deg)"
+              : "rotateY(0deg)",
           }}
         >
+
+          {/* PREDNÁ STRANA */}
+
           <div
             style={{
               position: "absolute",
               width: "100%",
               height: "100%",
-              backfaceVisibility: "hidden",
+              backfaceVisibility:
+                "hidden",
+              WebkitBackfaceVisibility:
+                "hidden",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -861,13 +1318,20 @@ function HeroSection() {
             />
           </div>
 
+
+          {/* ZADNÁ STRANA */}
+
           <div
             style={{
               position: "absolute",
               width: "100%",
               height: "100%",
-              backfaceVisibility: "hidden",
-              transform: "rotateY(180deg)",
+              backfaceVisibility:
+                "hidden",
+              WebkitBackfaceVisibility:
+                "hidden",
+              transform:
+                "rotateY(180deg)",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -875,30 +1339,52 @@ function HeroSection() {
               boxSizing: "border-box",
             }}
           >
-            
             <div>
 
-              
-
-              <h3 style={{ fontSize: "30px", marginBottom: "18px", color: "#9b6300" }}>
+              <h3
+                style={{
+                  fontSize: "30px",
+                  marginBottom: "18px",
+                  color: "#9b6300",
+                }}
+              >
                 O našom združení
               </h3>
-              <p style={{ fontSize: "18px", lineHeight: "1.8", color: "#555" }}>
-                OZ Apitera podporuje komunitné aktivity, spoluprácu, pomoc a rozvoj.
-                Naším cieľom je prepájať ľudí a vytvárať projekty s pozitívnym dopadom.
+
+              <p
+                style={{
+                  fontSize: "18px",
+                  lineHeight: "1.8",
+                  color: "#555",
+                }}
+              >
+                OZ Apitera podporuje komunitné aktivity, spoluprácu,
+                pomoc a rozvoj. Naším cieľom je prepájať ľudí
+                a vytvárať projekty s pozitívnym dopadom.
               </p>
+
             </div>
           </div>
+
         </div>
 
-<div className="mobile-flip-hint">
-              Ťuknite na obrázok pre viac informácií
-              </div>
+
+        {/* TEXT LEN PRE MOBIL */}
+
+        <div className="mobile-flip-hint">
+          Ťuknite na obrázok pre viac informácií
+        </div>
 
       </div>
+
     </section>
   );
 }
+
+
+/* =========================================================
+   AKTUALITY
+   ========================================================= */
 
 function AktualitySection() {
   return (
@@ -912,7 +1398,10 @@ function AktualitySection() {
       }}
     >
       <div style={containerStyle}>
-        <h2 style={sectionTitle}>Aktuality</h2>
+
+        <h2 style={sectionTitle}>
+          Aktuality
+        </h2>
 
         <p
           style={{
@@ -927,143 +1416,109 @@ function AktualitySection() {
           podujatiach, vzdelávacích stretnutiach a komunitných projektoch.
         </p>
 
+
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+            gridTemplateColumns:
+              "repeat(auto-fit, minmax(260px, 1fr))",
             gap: "20px",
           }}
         >
-          <div
-            style={{
-              background: "#fff",
-              borderRadius: "22px",
-              padding: "24px",
-              border: "1px solid #f1ead8",
-              boxShadow: "0 8px 24px rgba(0,0,0,0.06)",
-            }}
-          >
-            <div
-              style={{
-                fontSize: "14px",
-                fontWeight: "bold",
-                color: "#c27c00",
-                marginBottom: "10px",
-              }}
-            >
-              Novinka
-            </div>
-            <h3
-              style={{
-                fontSize: "24px",
-                marginTop: 0,
-                marginBottom: "12px",
-                color: "#1f1f1f",
-              }}
-            >
-              Pripravujeme nové podujatia
-            </h3>
-            <p
-              style={{
-                fontSize: "16px",
-                lineHeight: "1.7",
-                color: "#555",
-                margin: 0,
-              }}
-            >
-              Už čoskoro zverejníme termíny pripravovaných stretnutí,
-              workshopov a komunitných aktivít.
-            </p>
-          </div>
 
-          <div
-            style={{
-              background: "#fff",
-              borderRadius: "22px",
-              padding: "24px",
-              border: "1px solid #f1ead8",
-              boxShadow: "0 8px 24px rgba(0,0,0,0.06)",
-            }}
+          <AktualitaCard
+            label="Novinka"
+            title="Pripravujeme nové podujatia"
           >
-            <div
-              style={{
-                fontSize: "14px",
-                fontWeight: "bold",
-                color: "#c27c00",
-                marginBottom: "10px",
-              }}
-            >
-              Oznámenie
-            </div>
-            <h3
-              style={{
-                fontSize: "24px",
-                marginTop: 0,
-                marginBottom: "12px",
-                color: "#1f1f1f",
-              }}
-            >
-              Rozširujeme spoluprácu
-            </h3>
-            <p
-              style={{
-                fontSize: "16px",
-                lineHeight: "1.7",
-                color: "#555",
-                margin: 0,
-              }}
-            >
-              Postupne prepájame partnerov, dobrovoľníkov a podporovateľov,
-              ktorí chcú pomôcť našim aktivitám rásť.
-            </p>
-          </div>
+            Už čoskoro zverejníme termíny pripravovaných stretnutí,
+            workshopov a komunitných aktivít.
+          </AktualitaCard>
 
-          <div
-            style={{
-              background: "#fff",
-              borderRadius: "22px",
-              padding: "24px",
-              border: "1px solid #f1ead8",
-              boxShadow: "0 8px 24px rgba(0,0,0,0.06)",
-            }}
+
+          <AktualitaCard
+            label="Oznámenie"
+            title="Rozširujeme spoluprácu"
           >
-            <div
-              style={{
-                fontSize: "14px",
-                fontWeight: "bold",
-                color: "#c27c00",
-                marginBottom: "10px",
-              }}
-            >
-              Informácia
-            </div>
-            <h3
-              style={{
-                fontSize: "24px",
-                marginTop: 0,
-                marginBottom: "12px",
-                color: "#1f1f1f",
-              }}
-            >
-              Pracujeme na nových projektoch
-            </h3>
-            <p
-              style={{
-                fontSize: "16px",
-                lineHeight: "1.7",
-                color: "#555",
-                margin: 0,
-              }}
-            >
-              Našim cieľom je prinášať zmysluplné iniciatívy v oblasti osvety,
-              komunity a podpory včelárstva.
-            </p>
-          </div>
+            Postupne prepájame partnerov, dobrovoľníkov a podporovateľov,
+            ktorí chcú pomôcť našim aktivitám rásť.
+          </AktualitaCard>
+
+
+          <AktualitaCard
+            label="Informácia"
+            title="Pracujeme na nových projektoch"
+          >
+            Našim cieľom je prinášať zmysluplné iniciatívy v oblasti osvety,
+            komunity a podpory včelárstva.
+          </AktualitaCard>
+
         </div>
+
       </div>
     </section>
   );
 }
+
+
+function AktualitaCard({
+  label,
+  title,
+  children,
+}) {
+  return (
+    <div
+      style={{
+        background: "#fff",
+        borderRadius: "22px",
+        padding: "24px",
+        border:
+          "1px solid #f1ead8",
+        boxShadow:
+          "0 8px 24px rgba(0,0,0,0.06)",
+      }}
+    >
+
+      <div
+        style={{
+          fontSize: "14px",
+          fontWeight: "bold",
+          color: "#c27c00",
+          marginBottom: "10px",
+        }}
+      >
+        {label}
+      </div>
+
+      <h3
+        style={{
+          fontSize: "24px",
+          marginTop: 0,
+          marginBottom: "12px",
+          color: "#1f1f1f",
+        }}
+      >
+        {title}
+      </h3>
+
+      <p
+        style={{
+          fontSize: "16px",
+          lineHeight: "1.7",
+          color: "#555",
+          margin: 0,
+        }}
+      >
+        {children}
+      </p>
+
+    </div>
+  );
+}
+
+
+/* =========================================================
+   PODPORTE NÁS
+   ========================================================= */
 
 function PodporaSection() {
   return (
@@ -1082,22 +1537,41 @@ function PodporaSection() {
           maxWidth: "1100px",
           margin: "0 auto",
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+          gridTemplateColumns:
+            "repeat(auto-fit, minmax(300px, 1fr))",
           gap: "30px",
           alignItems: "center",
         }}
       >
+
         <div>
-          <h2 style={{ fontSize: "40px", marginBottom: "20px" }}>Podporte nás</h2>
-          <p style={{ fontSize: "18px", lineHeight: "1.8", color: "#e7d8c5" }}>
-            Pomôžte nám realizovať ďalšie projekty a aktivity. Podporiť nás môžete
-            finančne, dobrovoľníckou pomocou alebo partnerskou spoluprácou.
+          <h2
+            style={{
+              fontSize: "40px",
+              marginBottom: "20px",
+            }}
+          >
+            Podporte nás
+          </h2>
+
+          <p
+            style={{
+              fontSize: "18px",
+              lineHeight: "1.8",
+              color: "#e7d8c5",
+            }}
+          >
+            Pomôžte nám realizovať ďalšie projekty a aktivity.
+            Podporiť nás môžete finančne, dobrovoľníckou pomocou
+            alebo partnerskou spoluprácou.
           </p>
         </div>
 
+
         <div
           style={{
-            background: "rgba(255,255,255,0.08)",
+            background:
+              "rgba(255,255,255,0.08)",
             borderRadius: "24px",
             padding: "28px",
           }}
@@ -1105,7 +1579,8 @@ function PodporaSection() {
           <div
             style={{
               fontSize: "14px",
-              textTransform: "uppercase",
+              textTransform:
+                "uppercase",
               letterSpacing: "2px",
               color: "#d9c0a1",
               marginBottom: "16px",
@@ -1113,85 +1588,192 @@ function PodporaSection() {
           >
             Možnosti podpory
           </div>
-          <ul style={{ paddingLeft: "20px", lineHeight: "2", fontSize: "18px" }}>
-            <li>Dobrovoľnícka pomoc</li>
-            <li>Finančný príspevok</li>
-            <li>Partnerská spolupráca</li>
-            <li>Propagácia našich aktivít</li>
+
+          <ul
+            style={{
+              paddingLeft: "20px",
+              lineHeight: "2",
+              fontSize: "18px",
+            }}
+          >
+            <li>
+              Dobrovoľnícka pomoc
+            </li>
+
+            <li>
+              Finančný príspevok
+            </li>
+
+            <li>
+              Partnerská spolupráca
+            </li>
+
+            <li>
+              Propagácia našich aktivít
+            </li>
           </ul>
+
         </div>
+
       </div>
     </section>
   );
 }
 
+
+/* =========================================================
+   KONTAKT
+   ========================================================= */
+
 function KontaktSection() {
   return (
-    <section 
+    <section
       id="kontakt"
       className="kontakt-section"
-      style={{ ...sectionStyle, scrollMarginTop: "170px" }}>
+      style={{
+        ...sectionStyle,
+        scrollMarginTop: "170px",
+      }}
+    >
       <div
         className="contact-grid"
         style={{
           maxWidth: "1100px",
           margin: "0 auto",
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+          gridTemplateColumns:
+            "repeat(auto-fit, minmax(300px, 1fr))",
           gap: "30px",
         }}
       >
+
         <div>
-          <h2 style={sectionTitle}>Kontakt</h2>
+
+          <h2 style={sectionTitle}>
+            Kontakt
+          </h2>
+
           <p style={paragraphStyle}>
             Radi sa s vami spojíme. Doplňte sem svoje reálne kontaktné údaje.
           </p>
 
-          <div style={{ marginTop: "22px", lineHeight: "2", fontSize: "18px" }}>
-            <div><strong>E-mail:</strong> info@ozapitera.sk</div>
-            <div><strong>Telefón:</strong> +421 xxx xxx xxx</div>
-            <div><strong>Adresa:</strong> Ulica 123, Mesto</div>
+          <div
+            style={{
+              marginTop: "22px",
+              lineHeight: "2",
+              fontSize: "18px",
+            }}
+          >
+            <div>
+              <strong>
+                E-mail:
+              </strong>{" "}
+              info@ozapitera.sk
+            </div>
+
+            <div>
+              <strong>
+                Telefón:
+              </strong>{" "}
+              +421 xxx xxx xxx
+            </div>
+
+            <div>
+              <strong>
+                Adresa:
+              </strong>{" "}
+              Ulica 123, Mesto
+            </div>
           </div>
+
         </div>
+
 
         <div
           className="contact-form-box"
           style={{
             background: "#fff8ea",
-            border: "1px solid #f0dfb4",
+            border:
+              "1px solid #f0dfb4",
             borderRadius: "24px",
             padding: "28px",
-            boxShadow: "0 8px 24px rgba(0,0,0,0.06)",
+            boxShadow:
+              "0 8px 24px rgba(0,0,0,0.06)",
           }}
         >
-          <h3 style={{ fontSize: "28px", marginTop: 0 }}>Napíšte nám</h3>
 
-          <div style={{ display: "grid", gap: "14px", marginTop: "18px" }}>
-            <input type="text" placeholder="Meno a priezvisko" style={inputStyle} />
-            <input type="email" placeholder="E-mail" style={inputStyle} />
-            <textarea placeholder="Vaša správa" rows="5" style={inputStyle}></textarea>
-            <button style={primaryButtonButton}>Odoslať správu</button>
+          <h3
+            style={{
+              fontSize: "28px",
+              marginTop: 0,
+            }}
+          >
+            Napíšte nám
+          </h3>
+
+          <div
+            style={{
+              display: "grid",
+              gap: "14px",
+              marginTop: "18px",
+            }}
+          >
+
+            <input
+              type="text"
+              placeholder="Meno a priezvisko"
+              style={inputStyle}
+            />
+
+            <input
+              type="email"
+              placeholder="E-mail"
+              style={inputStyle}
+            />
+
+            <textarea
+              placeholder="Vaša správa"
+              rows="5"
+              style={inputStyle}
+            />
+
+            <button
+              style={primaryButtonButton}
+            >
+              Odoslať správu
+            </button>
+
           </div>
+
         </div>
+
       </div>
     </section>
   );
 }
+
+
+/* =========================================================
+   ŠTÝLY
+   ========================================================= */
 
 const containerStyle = {
   maxWidth: "1100px",
   margin: "0 auto",
 };
 
+
 const sectionStyle = {
   padding: "80px 24px",
 };
+
 
 const sectionTitle = {
   fontSize: "40px",
   marginBottom: "20px",
   color: "#1f1f1f",
 };
+
 
 const paragraphStyle = {
   fontSize: "18px",
@@ -1200,15 +1782,18 @@ const paragraphStyle = {
   maxWidth: "850px",
 };
 
+
 const inputStyle = {
   width: "100%",
   padding: "14px 16px",
   borderRadius: "14px",
   border: "1px solid #ddd",
   fontSize: "16px",
-  fontFamily: "Arial, sans-serif",
+  fontFamily:
+    "Arial, sans-serif",
   boxSizing: "border-box",
 };
+
 
 const primaryButton = {
   display: "inline-block",
@@ -1219,6 +1804,7 @@ const primaryButton = {
   textDecoration: "none",
   fontWeight: "bold",
 };
+
 
 const secondaryButton = {
   display: "inline-block",
@@ -1231,6 +1817,7 @@ const secondaryButton = {
   border: "1px solid #ddd",
 };
 
+
 const primaryButtonButton = {
   background: "#c27c00",
   color: "white",
@@ -1242,6 +1829,7 @@ const primaryButtonButton = {
   cursor: "pointer",
 };
 
+
 const navItemStyle = {
   textDecoration: "none",
   color: "#5f4a1d",
@@ -1251,6 +1839,7 @@ const navItemStyle = {
   whiteSpace: "nowrap",
 };
 
+
 const navButtonStyle = {
   textDecoration: "none",
   background: "#c27c00",
@@ -1258,9 +1847,11 @@ const navButtonStyle = {
   fontWeight: "bold",
   padding: "10px 16px",
   borderRadius: "12px",
-  boxShadow: "0 6px 16px rgba(194,124,0,0.25)",
+  boxShadow:
+    "0 6px 16px rgba(194,124,0,0.25)",
   whiteSpace: "nowrap",
 };
+
 
 const navDropdownTriggerStyle = {
   background: "transparent",
@@ -1272,24 +1863,30 @@ const navDropdownTriggerStyle = {
   cursor: "pointer",
   fontSize: "16px",
   whiteSpace: "nowrap",
-  fontFamily: "Arial, sans-serif",
+  fontFamily:
+    "Arial, sans-serif",
 };
+
 
 const goldDropdownMenuStyle = {
   position: "absolute",
   top: "calc(100% - 2px)",
   left: "0",
   minWidth: "230px",
-  background: "linear-gradient(to bottom, #fffdf6, #fff7e8)",
-  border: "1px solid #ead7ac",
+  background:
+    "linear-gradient(to bottom, #fffdf6, #fff7e8)",
+  border:
+    "1px solid #ead7ac",
   borderRadius: "18px",
-  boxShadow: "0 16px 34px rgba(138, 99, 20, 0.18)",
+  boxShadow:
+    "0 16px 34px rgba(138, 99, 20, 0.18)",
   padding: "12px",
   display: "flex",
   flexDirection: "column",
   gap: "8px",
   zIndex: 50,
 };
+
 
 const goldDropdownItemStyle = {
   textDecoration: "none",
@@ -1299,9 +1896,12 @@ const goldDropdownItemStyle = {
   borderRadius: "12px",
   whiteSpace: "nowrap",
   display: "block",
-  background: "rgba(255,255,255,0.6)",
-  border: "1px solid rgba(234, 215, 172, 0.65)",
+  background:
+    "rgba(255,255,255,0.6)",
+  border:
+    "1px solid rgba(234, 215, 172, 0.65)",
 };
+
 
 const pageWrapStyle = {
   maxWidth: "1100px",
@@ -1309,22 +1909,27 @@ const pageWrapStyle = {
   padding: "80px 24px",
 };
 
+
 const pageTitleStyle = {
   fontSize: "48px",
   marginBottom: "24px",
   color: "#1f1f1f",
 };
 
+
 const educationCardStyle = {
   display: "block",
   textDecoration: "none",
   background: "#ffffff",
-  border: "1px solid #f1ead8",
+  border:
+    "1px solid #f1ead8",
   borderRadius: "20px",
   padding: "24px",
-  boxShadow: "0 8px 24px rgba(0,0,0,0.05)",
+  boxShadow:
+    "0 8px 24px rgba(0,0,0,0.05)",
   color: "#222",
 };
+
 
 const educationLabelStyle = {
   fontSize: "14px",
@@ -1333,6 +1938,7 @@ const educationLabelStyle = {
   marginBottom: "10px",
 };
 
+
 const educationTitleStyle = {
   fontSize: "24px",
   marginTop: 0,
@@ -1340,12 +1946,14 @@ const educationTitleStyle = {
   color: "#1f1f1f",
 };
 
+
 const educationTextStyle = {
   fontSize: "16px",
   lineHeight: "1.7",
   color: "#555",
   margin: 0,
 };
+
 
 const socialIconLinkStyle = {
   width: "44px",
@@ -1356,7 +1964,9 @@ const socialIconLinkStyle = {
   borderRadius: "50%",
   background: "#fff7e8",
   color: "#9b6300",
-  border: "1px solid #ead7ac",
+  border:
+    "1px solid #ead7ac",
   textDecoration: "none",
-  boxShadow: "0 6px 16px rgba(138, 99, 20, 0.10)",
+  boxShadow:
+    "0 6px 16px rgba(138, 99, 20, 0.10)",
 };

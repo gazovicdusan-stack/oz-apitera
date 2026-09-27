@@ -583,3 +583,82 @@
     padding: 14px !important;
   }
 }
+
+/* =========================
+   TABLET - 769px až 1024px
+   ========================= */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .header-inner {
+    padding: 14px 18px !important;
+    gap: 14px !important;
+  }
+
+  .header-logo {
+    width: 82px !important;
+    height: 82px !important;
+  }
+
+  .brand-area {
+    gap: 10px !important;
+  }
+
+  .brand-area > div > div:first-child {
+    font-size: 22px !important;
+  }
+
+  .brand-area > div > div:last-child {
+    font-size: 12px !important;
+  }
+
+  .main-nav {
+    min-width: 0 !important;
+    gap: 4px !important;
+    padding: 8px 10px !important;
+  }
+
+  .hero-section {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 28px !important;
+    padding: 56px 20px 46px !important;
+  }
+
+  .hero-text h1 {
+    font-size: 44px !important;
+  }
+
+  .hero-text p {
+    font-size: 17px !important;
+  }
+
+  .hero-card {
+    padding: 16px !important;
+  }
+
+  .hero-flip-inner {
+    height: 400px !important;
+  }
+
+  .hero-card img {
+    max-width: 340px !important;
+  }
+
+  .page-mobile-wrap {
+    padding: 56px 22px !important;
+  }
+
+  .article-card {
+    padding: 26px !important;
+  }
+
+  .contact-grid {
+    gap: 24px !important;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .main-nav a,
+  .main-nav button {
+    font-size: 14px !important;
+    padding: 8px 10px !important;
+  }
+}

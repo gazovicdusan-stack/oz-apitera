@@ -382,6 +382,11 @@ export default function OZApiteraWebsite() {
   const [showMobileAbout, setShowMobileAbout] = useState(false);
   const [showMobileActivities, setShowMobileActivities] = useState(false);
 
+  const closeMobileMenu = () => {
+    setShowMobileMenu(false);
+    setShowMobileAbout(false);
+    setShowMobileActivities(false);
+
   const goHome = (e) => {
     e.preventDefault();
 
@@ -474,13 +479,19 @@ export default function OZApiteraWebsite() {
           </div>
 
             <button
-              type="button"
-              className="mobile-menu-button"
-              onClick={() => setShowMobileMenu(!showMobileMenu)}
-              aria-label="Otvoriť menu"
+             type="button"
+             className="mobile-menu-button"
+             onClick={() => {
+              if (showMobileMenu) {
+                closeMobileMenu();
+              } else {
+                setShowMobileMenu(true);
+              }
+            }}
+            aria-label={showMobileMenu ? "Zatvoriť menu" : "Otvoriť menu"}
             >
               {showMobileMenu ? "✕" : "☰"}
-            </button>
+              </button>
 
           <nav
             className="main-nav"
@@ -553,7 +564,7 @@ export default function OZApiteraWebsite() {
       href="/"
       onClick={(e) => {
         goHome(e);
-        setShowMobileMenu(false);
+        closeMobileMenu();
       }}
       className="mobile-menu-item"
     >
@@ -574,7 +585,7 @@ export default function OZApiteraWebsite() {
         <Link
           to="/o-apitere"
           className="mobile-submenu-item"
-          onClick={() => setShowMobileMenu(false)}
+          onClick={closeMobileMenu}
         >
           O Apitere
         </Link>
@@ -582,7 +593,7 @@ export default function OZApiteraWebsite() {
         <Link
           to="/nas-tim"
           className="mobile-submenu-item"
-          onClick={() => setShowMobileMenu(false)}
+          onClick={closeMobileMenu}
         >
           Náš tím
         </Link>
@@ -590,7 +601,7 @@ export default function OZApiteraWebsite() {
         <Link
           to="/nase-vcelnice"
           className="mobile-submenu-item"
-          onClick={() => setShowMobileMenu(false)}
+          onClick={closeMobileMenu}
         >
           Naše včelnice
         </Link>
@@ -611,7 +622,7 @@ export default function OZApiteraWebsite() {
         <Link
           to="/vzdelavanie"
           className="mobile-submenu-item"
-          onClick={() => setShowMobileMenu(false)}
+          onClick={closeMobileMenu}
         >
           Vzdelávanie
         </Link>
@@ -619,7 +630,7 @@ export default function OZApiteraWebsite() {
         <Link
           to="/veda-a-vyskum"
           className="mobile-submenu-item"
-          onClick={() => setShowMobileMenu(false)}
+          onClick={closeMobileMenu}
         >
           Veda a výskum
         </Link>
@@ -629,7 +640,7 @@ export default function OZApiteraWebsite() {
     <Link
       to="/granty"
       className="mobile-menu-item"
-      onClick={() => setShowMobileMenu(false)}
+      onClick={closeMobileMenu}
     >
       Granty
     </Link>
@@ -639,7 +650,7 @@ export default function OZApiteraWebsite() {
       className="mobile-menu-item"
       onClick={(e) => {
         goToSection("podpora")(e);
-        setShowMobileMenu(false);
+        closeMobileMenu();
       }}
     >
       Podporte nás
@@ -650,7 +661,7 @@ export default function OZApiteraWebsite() {
       className="mobile-menu-contact"
       onClick={(e) => {
         goToSection("kontakt")(e);
-        setShowMobileMenu(false);
+        closeMobileMenu();
       }}
     >
       Kontakt
